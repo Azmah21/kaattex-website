@@ -3,7 +3,7 @@ export const home = {
     eyebrow: "EST. 1999 — FAISALABAD, PAKISTAN",
     title: "Embroidery, at the scale of industry. At the standard of craft.",
     description:
-      "Twenty Barudan machines, one quiet obsession with thread, tension, and tone. Trusted by Pakistan's leading apparel and textile houses for twenty-seven years.",
+      "Twenty Barudan machines, one quiet obsession with thread, quality, and customer service. Trusted by Pakistan's leading apparel and textile houses for twenty-seven years.",
     primaryLink: { label: "See our work", href: "/work" },
     secondaryLink: { label: "Make an inquiry", href: "/contact" },
   },

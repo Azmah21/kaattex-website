@@ -18,7 +18,8 @@ export const site = {
     phone: "+92 333 6622222",
     email: "info@kaattex.com",
     whatsapp: "+92 333 6622222",
-    mapsEmbedUrl: "https://www.google.com/maps/embed?pb=[TO BE PROVIDED]",
+    mapsEmbedUrl:
+      "https://www.google.com/maps?q=Pul%20Abdullah%20Bridge%2C%20Main%20Samundri%20Road%2C%20near%20Hascol%20Petrol%20Pump%2C%20P-246%20Muhalla%20Farooqabad%2C%20Faisalabad%2C%20Pakistan&output=embed",
   },
   footer: {
     blurb:
