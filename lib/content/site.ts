@@ -13,7 +13,7 @@ const contact = {
 const contactUr = {
   ...contact,
   address:
-    "پل عبداللہ برج، مین سمندری روڈ، ہیس کول پیٹرول پمپ کے قریب، P-246 محلہ فاروق آباد، فیصل آباد، پاکستان",
+    "پل عبداللہ برج، مین سمندری روڈ، ہیسکول پیٹرول پمپ کے قریب، P-246 محلہ فاروق آباد، فیصل آباد، پاکستان",
 } as const
 
 export const site = {
@@ -30,7 +30,7 @@ export const site = {
     { label: "FAQ", href: "/faq" },
     { label: "Contact", href: "/contact" },
   ],
-  contact: contactUr,
+  contact,
   footer: {
     blurb:
       "A 27-year embroidery house operating 20 Barudan machines for Pakistan’s leading apparel and textile brands.",
@@ -52,7 +52,7 @@ export const siteUr = {
     { label: "سوالات", href: withLocalePath("/faq", "ur") },
     { label: "رابطہ", href: withLocalePath("/contact", "ur") },
   ],
-  contact,
+  contact: contactUr,
   footer: {
     blurb:
       "ستائیس برس پرانا کڑھائی گھر، جو پاکستان کے نمایاں ملبوسات اور ٹیکسٹائل اداروں کے لیے 20 باروڈان مشینوں کے ساتھ کام کرتا ہے۔",

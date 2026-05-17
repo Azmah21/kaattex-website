@@ -25,8 +25,11 @@ export function ClientMarquee({ clients, locale }: { clients: ClientItem[]; loca
         </Reveal>
       </Container>
 
-      <Reveal className="mt-16 overflow-hidden">
-        <div className="motion-marquee flex min-w-max animate-marquee items-center hover:[animation-play-state:paused]">
+      <Reveal dir="ltr" className="mt-16 overflow-hidden">
+        <div
+          dir="ltr"
+          className="motion-marquee flex min-w-max animate-marquee items-center hover:[animation-play-state:paused]"
+        >
           {items.map((client, index) => (
             <figure
               key={`${client.name}-${index}`}
