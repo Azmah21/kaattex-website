@@ -55,7 +55,7 @@ export const about = {
   },
   machines: {
     eyebrow: "THE MACHINES",
-    title: "Japanese precision, held to one house standard.",
+    title: "Barudan embroidery machines in Faisalabad, held to one house standard.",
     body:
       "Twenty Barudan multi-head embroidery machines — sourced directly from Japan, maintained by an in-house technical team — let us hold consistent quality across runs that span tens of thousands of units. Capacity matters to our clients in two ways: it lets us absorb urgent timelines without compromising quality, and it lets us produce a single brand standard across the full run, head to head.",
   },

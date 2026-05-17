@@ -25,6 +25,7 @@ export function createMetadata({
   return {
     title,
     description,
+    category: "Industrial embroidery manufacturing",
     alternates: {
       canonical: url,
       languages: {

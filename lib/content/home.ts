@@ -24,6 +24,14 @@ export const home = {
     ],
     link: { label: "More about Kaattex", href: "/about" },
   },
+  manufacturers: {
+    eyebrow: "FOR MANUFACTURERS",
+    title: "Commercial embroidery for apparel and textile manufacturers in Punjab and across Pakistan.",
+    paragraphs: [
+      "Kaattex is built for production teams that need repeatable embroidery at industrial scale: logo programs, decorative work, sequins, appliqué, and puff embroidery across commercial runs.",
+      "Based in Faisalabad, Punjab, we welcome inquiries from apparel and textile manufacturers in Faisalabad, Lahore, and across Pakistan, with in-house capacity shaped for B2B timelines and brand consistency.",
+    ],
+  },
   capabilities: {
     eyebrow: "CAPABILITIES",
     title: "Five disciplines, refined over twenty-seven years.",
@@ -88,6 +96,14 @@ export const homeUr = {
       "آج جاپان سے براہِ راست درآمد شدہ بیس باروڈان مشینیں پاکستان کے کئی مضبوط ملبوسات اور ٹیکسٹائل اداروں کے لیے کام کرتی ہیں، ساتھ ہی ایسے برآمدی پروگرام بھی جن کی منزل برطانیہ، یورپی یونین، اور امریکا ہے۔ وہی ہاتھ۔ وہی نظر۔ بس زیادہ وسعت کے ساتھ۔",
     ],
     link: { label: "Kaattex کے بارے میں مزید", href: withLocalePath("/about", "ur") },
+  },
+  manufacturers: {
+    eyebrow: "صنعتی خریداروں کے لیے",
+    title: "پنجاب اور پورے پاکستان کے ملبوسات اور ٹیکسٹائل اداروں کے لیے تجارتی کڑھائی۔",
+    paragraphs: [
+      "Kaattex اُن پیداواری ٹیموں کے لیے بنایا گیا ہے جنہیں صنعتی پیمانے پر مستقل معیار کی کڑھائی درکار ہوتی ہے: لوگو پروگرام، آرائشی کام، سیکوئن، اپلیکے، اور پف کڑھائی بڑے تجارتی رنز میں۔",
+      "فیصل آباد، پنجاب میں قائم Kaattex فیصل آباد، لاہور، اور پورے پاکستان کے ملبوسات اور ٹیکسٹائل اداروں سے استفسارات خوش آمدید کہتا ہے، جہاں ہماری اندرونی گنجائش B2B ٹائم لائنز اور برانڈ یکسانیت کے لیے موزوں ہے۔",
+    ],
   },
   capabilities: {
     eyebrow: "صلاحیتیں",

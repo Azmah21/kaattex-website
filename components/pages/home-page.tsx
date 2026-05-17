@@ -68,6 +68,24 @@ export function HomePageContent({ locale }: { locale: Locale }) {
         </Container>
       </section>
 
+      <section aria-labelledby="home-manufacturers-title" className="bg-ivory py-24 md:py-32">
+        <Container>
+          <Reveal className="grid gap-10 md:grid-cols-[minmax(0,0.8fr)_minmax(0,1fr)] md:gap-20">
+            <div>
+              <Eyebrow>{home.manufacturers.eyebrow}</Eyebrow>
+              <h2 id="home-manufacturers-title" className="mt-6 text-display-lg italic">
+                {home.manufacturers.title}
+              </h2>
+            </div>
+            <div className="space-y-8 text-body-lg text-graphite">
+              {home.manufacturers.paragraphs.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
+          </Reveal>
+        </Container>
+      </section>
+
       <CapabilityList locale={locale} />
       <WorkGrid images={workPreview} locale={locale} />
       <ClientMarquee clients={clientItems} locale={locale} />

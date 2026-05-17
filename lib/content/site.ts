@@ -21,7 +21,7 @@ export const site = {
   wordmark: "KAATTEX",
   tagline: "Industrial embroidery, made in Faisalabad since 1999.",
   description:
-    "Kaattex is a Faisalabad-based embroidery manufacturer producing precision embroidery, sequin work, appliqué, and puff embroidery for apparel and home-textile brands across Pakistan and abroad.",
+    "Kaattex is an industrial embroidery manufacturer in Faisalabad, Punjab, producing precision embroidery, sequin work, appliqué, and puff embroidery for apparel and home-textile manufacturers across Pakistan and abroad.",
   nav: [
     { label: "Work", href: "/work" },
     { label: "Capabilities", href: "/capabilities" },
@@ -33,7 +33,7 @@ export const site = {
   contact,
   footer: {
     blurb:
-      "A 27-year embroidery house operating 20 Barudan machines for Pakistan’s leading apparel and textile brands.",
+      "A 27-year industrial embroidery house in Faisalabad operating 20 Barudan machines for Pakistan’s leading apparel and textile brands.",
     copyright: (year: number) => `© ${year} Kaattex. Faisalabad, Pakistan.`,
   },
 } as const

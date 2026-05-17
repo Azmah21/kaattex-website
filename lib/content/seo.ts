@@ -2,39 +2,39 @@ import type { Locale } from "@/lib/i18n"
 
 export const seo = {
   home: {
-    title: "Kaattex — Industrial embroidery from Faisalabad",
+    title: "Industrial Embroidery Manufacturer in Faisalabad — Kaattex",
     description:
-      "Kaattex produces industrial embroidery in Faisalabad with 20 Barudan machines, serving apparel and textile brands across Pakistan and abroad.",
+      "Industrial embroidery manufacturer in Faisalabad, Punjab, operating 20 Barudan machines for apparel and textile manufacturers across Pakistan.",
   },
   about: {
-    title: "About — Kaattex",
+    title: "About Kaattex — Faisalabad Embroidery Manufacturer",
     description:
-      "Learn how Kaattex grew from two machines in 1999 into a Faisalabad embroidery house operating 20 Japanese Barudan machines today with one enduring standard.",
+      "Learn how Kaattex grew from two machines in 1999 into a Faisalabad embroidery manufacturer operating 20 Japanese Barudan machines today.",
   },
   capabilities: {
-    title: "Capabilities — Kaattex",
+    title: "Industrial Embroidery Capabilities — Kaattex",
     description:
-      "Explore Kaattex capabilities across logo embroidery, decorative patterns, sequins, appliqué, and puff embroidery for apparel and textile programs.",
+      "Logo embroidery, decorative patterns, sequins, appliqué, and puff embroidery for apparel and textile manufacturers in Faisalabad and across Pakistan.",
   },
   work: {
-    title: "Work — Kaattex",
+    title: "Embroidery Work — Kaattex",
     description:
-      "View a working archive of recent Kaattex embroidery programs across apparel, home textiles, sportswear, and detailed stitch work from the factory floor.",
+      "View recent commercial embroidery programs across apparel, home textiles, sportswear, and detailed stitch work produced by Kaattex in Faisalabad.",
   },
   clients: {
-    title: "Clients — Kaattex",
+    title: "Clients — Kaattex Embroidery",
     description:
-      "See a selection of apparel and textile houses that have worked with Kaattex across Pakistani and export-oriented production programs over time.",
+      "See apparel and textile houses that have worked with Kaattex across Pakistani and export-oriented embroidery production programs over time.",
   },
   faq: {
-    title: "FAQ — Kaattex",
+    title: "Commercial Embroidery FAQ — Kaattex",
     description:
-      "Answers on order volumes, turnaround, fabrics, digitization, exports, and quality practices for commercial embroidery inquiries and program planning.",
+      "Answers on embroidery order volumes, turnaround, fabrics, digitization, exports, and quality practices for commercial production inquiries.",
   },
   contact: {
-    title: "Contact — Kaattex",
+    title: "Contact Kaattex — Embroidery Manufacturer in Faisalabad",
     description:
-      "Contact Kaattex in Faisalabad to discuss embroidery programs, production requirements, reference artwork, commercial inquiries, and next steps.",
+      "Contact Kaattex in Faisalabad for industrial embroidery programs, production requirements, reference artwork, and commercial B2B inquiries.",
   },
 } as const
 
