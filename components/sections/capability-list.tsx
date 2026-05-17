@@ -3,9 +3,12 @@ import { ArrowLink } from "@/components/primitives/arrow-link"
 import { Divider } from "@/components/primitives/divider"
 import { Eyebrow } from "@/components/primitives/eyebrow"
 import { Reveal } from "@/components/primitives/reveal"
-import { home } from "@/lib/content/home"
+import { getHome } from "@/lib/content/home"
+import type { Locale } from "@/lib/i18n"
 
-export function CapabilityList() {
+export function CapabilityList({ locale }: { locale: Locale }) {
+  const home = getHome(locale)
+
   return (
     <section aria-labelledby="home-capabilities-title" className="py-24 md:py-32">
       <Container>

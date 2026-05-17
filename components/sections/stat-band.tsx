@@ -1,9 +1,13 @@
 import { Container } from "@/components/layout/container"
 import { Reveal } from "@/components/primitives/reveal"
-import { home } from "@/lib/content/home"
-import { ui } from "@/lib/content/ui"
+import { getHome } from "@/lib/content/home"
+import { getUi } from "@/lib/content/ui"
+import type { Locale } from "@/lib/i18n"
 
-export function StatBand() {
+export function StatBand({ locale }: { locale: Locale }) {
+  const home = getHome(locale)
+  const ui = getUi(locale)
+
   return (
     <section aria-label={ui.accessibility.companyStatistics} className="bg-ivory py-16 md:py-20">
       <Container>

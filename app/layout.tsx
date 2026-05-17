@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Fraunces, Inter } from "next/font/google"
+import { Fraunces, Inter, Noto_Nastaliq_Urdu } from "next/font/google"
 import { Analytics } from "@vercel/analytics/react"
 import { site } from "@/lib/content/site"
 import { siteUrl } from "@/lib/seo"
@@ -20,6 +20,13 @@ const inter = Inter({
   display: "swap",
 })
 
+const notoNastaliqUrdu = Noto_Nastaliq_Urdu({
+  subsets: ["arabic"],
+  weight: ["400", "500"],
+  variable: "--font-urdu",
+  display: "swap",
+})
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "Kaattex — Industrial embroidery from Faisalabad",
@@ -32,7 +39,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${inter.variable}`}>
+    <html lang="en" className={`${fraunces.variable} ${inter.variable} ${notoNastaliqUrdu.variable}`}>
       <body className="bg-bone text-ink antialiased">
         {children}
         <Analytics />

@@ -1,7 +1,8 @@
 import { Container } from "@/components/layout/container"
 import { Eyebrow } from "@/components/primitives/eyebrow"
 import { Reveal } from "@/components/primitives/reveal"
-import { home } from "@/lib/content/home"
+import { getHome } from "@/lib/content/home"
+import type { Locale } from "@/lib/i18n"
 
 type ClientItem = {
   name: string
@@ -9,8 +10,9 @@ type ClientItem = {
   exists: boolean
 }
 
-export function ClientMarquee({ clients }: { clients: ClientItem[] }) {
+export function ClientMarquee({ clients, locale }: { clients: ClientItem[]; locale: Locale }) {
   const items = [...clients, ...clients]
+  const home = getHome(locale)
 
   return (
     <section aria-labelledby="home-clients-title" className="py-24 md:py-32">

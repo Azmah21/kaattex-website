@@ -1,21 +1,29 @@
 "use client"
 
 import { Sheet, SheetClose, SheetContent } from "@/components/ui/sheet"
-import { site } from "@/lib/content/site"
-import { ui } from "@/lib/content/ui"
+import { LocaleToggle } from "@/components/layout/locale-toggle"
+import { getSite } from "@/lib/content/site"
+import { getUi } from "@/lib/content/ui"
+import type { Locale } from "@/lib/i18n"
+import { withLocalePath } from "@/lib/i18n"
 
 export function MobileMenuSheet({
   open,
   onOpenChange,
+  locale,
 }: {
   open: boolean
   onOpenChange: (open: boolean) => void
+  locale: Locale
 }) {
+  const site = getSite(locale)
+  const ui = getUi(locale)
+
   return (
     <Sheet open={open} onOpenChange={onOpenChange}>
       <SheetContent>
         <div className="flex items-center justify-between">
-          <a href="/" className="font-display text-[18px] font-normal tracking-[0.2em] text-ink">
+          <a href={withLocalePath("/", locale)} className="font-display text-[18px] font-normal tracking-[0.2em] text-ink">
             {site.wordmark}
           </a>
           <SheetClose asChild>
@@ -34,6 +42,10 @@ export function MobileMenuSheet({
             </SheetClose>
           ))}
         </nav>
+
+        <div className="mt-12">
+          <LocaleToggle locale={locale} />
+        </div>
       </SheetContent>
     </Sheet>
   )

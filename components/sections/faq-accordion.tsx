@@ -1,9 +1,12 @@
 "use client"
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { faq } from "@/lib/content/faq"
+import { getFaq } from "@/lib/content/faq"
+import type { Locale } from "@/lib/i18n"
 
-export function FaqAccordion() {
+export function FaqAccordion({ locale }: { locale: Locale }) {
+  const faq = getFaq(locale)
+
   return (
     <Accordion type="single" collapsible className="w-full border-t border-rule">
       {faq.items.map((item) => (

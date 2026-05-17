@@ -15,7 +15,9 @@ export function ArrowLink({ className, children, ...props }: ArrowLinkProps) {
       {...props}
     >
       <span>{children}</span>
-      <span aria-hidden="true">→</span>
+      <span aria-hidden="true" className="arrow-glyph inline-block">
+        →
+      </span>
     </a>
   )
 }

@@ -1,8 +1,10 @@
 import { Container } from "@/components/layout/container"
 import { ArrowLink } from "@/components/primitives/arrow-link"
-import { ui } from "@/lib/content/ui"
+import { getUi } from "@/lib/content/ui"
 
 export default function NotFound() {
+  const ui = getUi("en")
+
   return (
     <main className="py-32 md:py-48">
       <Container>
@@ -16,3 +18,4 @@ export default function NotFound() {
     </main>
   )
 }
+

@@ -1,20 +1,9 @@
-import { Footer } from "@/components/layout/footer"
-import { Header } from "@/components/layout/header"
-import { HeaderObserver } from "@/components/layout/header-observer"
-import { RevealObserver } from "@/components/primitives/reveal-observer"
+import { SiteShell } from "@/components/layout/site-shell"
 
 export default function SiteLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  return (
-    <>
-      <Header />
-      <HeaderObserver />
-      <RevealObserver />
-      {children}
-      <Footer />
-    </>
-  )
+  return <SiteShell locale="en">{children}</SiteShell>
 }

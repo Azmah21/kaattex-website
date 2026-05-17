@@ -97,6 +97,58 @@ body {
     transition: transform 200ms ease;
   }
 
+  :dir(rtl) .animated-underline::after {
+    transform-origin: right center;
+  }
+
+  :dir(rtl) .arrow-glyph {
+    transform: scaleX(-1);
+  }
+
+  .locale-ur {
+    font-family: var(--font-urdu), serif;
+  }
+
+  .locale-ur h1,
+  .locale-ur h2,
+  .locale-ur h3,
+  .locale-ur h4,
+  .locale-ur h5,
+  .locale-ur h6,
+  .locale-ur .font-display {
+    font-family: var(--font-urdu), serif;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+
+  .locale-ur .text-display-2xl {
+    line-height: 1.42;
+    letter-spacing: 0;
+  }
+
+  .locale-ur .text-display-xl {
+    line-height: 1.45;
+    letter-spacing: 0;
+  }
+
+  .locale-ur .text-display-lg {
+    line-height: 1.55;
+    letter-spacing: 0;
+  }
+
+  .locale-ur .text-body-lg,
+  .locale-ur .text-body,
+  .locale-ur .text-body-sm,
+  .locale-ur p,
+  .locale-ur li,
+  .locale-ur dd {
+    line-height: 2;
+  }
+
+  .locale-ur .text-eyebrow {
+    letter-spacing: 0.08em;
+  }
+
   .animated-underline:hover::after,
   .animated-underline:focus-visible::after {
     transform: scaleX(1);

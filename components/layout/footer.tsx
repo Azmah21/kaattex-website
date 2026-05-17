@@ -1,10 +1,13 @@
 import { Container } from "@/components/layout/container"
 import { Divider } from "@/components/primitives/divider"
-import { site } from "@/lib/content/site"
-import { ui } from "@/lib/content/ui"
+import { getSite } from "@/lib/content/site"
+import { getUi } from "@/lib/content/ui"
+import type { Locale } from "@/lib/i18n"
 
-export function Footer() {
+export function Footer({ locale }: { locale: Locale }) {
   const year = new Date().getFullYear()
+  const site = getSite(locale)
+  const ui = getUi(locale)
 
   return (
     <footer className="bg-bone py-20">
@@ -29,13 +32,17 @@ export function Footer() {
 
           <div className="space-y-3 text-body-sm text-graphite">
             <p>{site.contact.address}</p>
-            <p>{site.contact.phone}</p>
-            <p>{site.contact.email}</p>
+            <p>
+              <bdi dir="ltr">{site.contact.phone}</bdi>
+            </p>
+            <p>
+              <bdi dir="ltr">{site.contact.email}</bdi>
+            </p>
           </div>
         </div>
 
         <Divider className="mt-16" />
-        <p className="mt-6 text-[12px] leading-5 text-ash">© {year} {site.name}. Faisalabad, Pakistan.</p>
+        <p className="mt-6 text-[12px] leading-5 text-ash">{site.footer.copyright(year)}</p>
       </Container>
     </footer>
   )

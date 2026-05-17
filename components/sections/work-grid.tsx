@@ -2,8 +2,9 @@ import { Container } from "@/components/layout/container"
 import { ArrowLink } from "@/components/primitives/arrow-link"
 import { OptimizedImage } from "@/components/primitives/optimized-image"
 import { Reveal } from "@/components/primitives/reveal"
-import { home } from "@/lib/content/home"
-import { ui } from "@/lib/content/ui"
+import { getHome } from "@/lib/content/home"
+import { getUi } from "@/lib/content/ui"
+import type { Locale } from "@/lib/i18n"
 
 type WorkGridProps = {
   images: Array<{
@@ -11,21 +12,25 @@ type WorkGridProps = {
     alt: string
     exists: boolean
   }>
+  locale: Locale
 }
 
-export function WorkGrid({ images }: WorkGridProps) {
+export function WorkGrid({ images, locale }: WorkGridProps) {
+  const home = getHome(locale)
+  const ui = getUi(locale)
+
   return (
     <section aria-label={ui.accessibility.selectedWork} className="py-24 md:py-32">
       <Container>
         <div className="grid gap-6 md:grid-cols-12 md:items-end">
           <Reveal className="md:col-span-5">
-            <WorkImage image={images[0]} className="aspect-[4/5]" />
+            <WorkImage image={images[0]} className="aspect-[4/5]" ui={ui} workHref={home.work.link.href} />
           </Reveal>
           <Reveal className="md:col-span-4 md:translate-y-16">
-            <WorkImage image={images[1]} className="aspect-[4/5]" />
+            <WorkImage image={images[1]} className="aspect-[4/5]" ui={ui} workHref={home.work.link.href} />
           </Reveal>
           <Reveal className="md:col-span-3">
-            <WorkImage image={images[2]} className="aspect-[4/5]" />
+            <WorkImage image={images[2]} className="aspect-[4/5]" ui={ui} workHref={home.work.link.href} />
           </Reveal>
         </div>
 
@@ -40,12 +45,16 @@ export function WorkGrid({ images }: WorkGridProps) {
 function WorkImage({
   image,
   className,
+  ui,
+  workHref,
 }: {
   image: WorkGridProps["images"][number]
   className?: string
+  ui: ReturnType<typeof getUi>
+  workHref: string
 }) {
   return (
-    <a href="/work" aria-label={ui.actions.seeWorkArchive} className="block">
+    <a href={workHref} aria-label={ui.actions.seeWorkArchive} className="block">
       <div className={`relative overflow-hidden ${className ?? ""}`}>
         {image.exists ? (
           <OptimizedImage

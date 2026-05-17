@@ -1,5 +1,7 @@
 import type { Metadata } from "next"
-import { site } from "@/lib/content/site"
+import { getSite } from "@/lib/content/site"
+import type { Locale } from "@/lib/i18n"
+import { defaultLocale, withLocalePath } from "@/lib/i18n"
 
 export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"
 
@@ -7,16 +9,28 @@ type MetadataInput = {
   title: string
   description: string
   path: string
+  locale?: Locale
 }
 
-export function createMetadata({ title, description, path }: MetadataInput): Metadata {
-  const url = new URL(path, siteUrl).toString()
+export function createMetadata({
+  title,
+  description,
+  path,
+  locale = defaultLocale,
+}: MetadataInput): Metadata {
+  const localizedPath = withLocalePath(path, locale)
+  const url = new URL(localizedPath, siteUrl).toString()
+  const site = getSite(locale)
 
   return {
     title,
     description,
     alternates: {
       canonical: url,
+      languages: {
+        en: new URL(path, siteUrl).toString(),
+        ur: new URL(withLocalePath(path, "ur"), siteUrl).toString(),
+      },
     },
     openGraph: {
       type: "website",

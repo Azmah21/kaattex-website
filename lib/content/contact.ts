@@ -1,3 +1,5 @@
+import type { Locale } from "@/lib/i18n"
+
 export const contactPage = {
   intro: {
     eyebrow: "CONTACT",
@@ -43,3 +45,53 @@ export const contactPage = {
     },
   },
 } as const
+
+export const contactPageUr = {
+  intro: {
+    eyebrow: "رابطہ",
+    title: "اپنے پروگرام پر بات کرتے ہیں۔",
+    subtitle: "ہم انکوائریز کا جواب ایک ورکنگ ڈے کے اندر دیتے ہیں۔",
+  },
+  sections: {
+    inquiryTitle: "انکوائری",
+    directTitle: "براہِ راست رابطہ",
+  },
+  direct: {
+    visit: "تشریف لائیں",
+    call: "کال",
+    write: "ای میل",
+    whatsapp: "واٹس ایپ",
+    whatsappLink: "چیٹ شروع کریں",
+    whatsappMessage: "السلام علیکم Kaattex، میں ایک کڑھائی پروگرام پر بات کرنا چاہتا ہوں۔",
+    mapFallback: "نقشہ لوڈ ہو رہا ہے۔ اگر یہ برقرار رہے تو اوپر دی گئی رابطہ تفصیل دیکھیں۔",
+    mapTitle: "Kaattex کا نقشہ",
+  },
+  form: {
+    companyName: "کمپنی کا نام",
+    customerName: "آپ کا نام",
+    email: "ای میل",
+    phoneNumber: "فون نمبر",
+    projectDetails: "پروجیکٹ کی تفصیل",
+    attachment: "ریفرنس فائل",
+    attachmentHint: "ایک JPG، JPEG، PNG، WEBP، یا ZIP فائل اپ لوڈ کریں۔ زیادہ سے زیادہ 10MB۔",
+    removeFile: "فائل ہٹائیں",
+    sendInquiry: "انکوائری بھیجیں",
+    success: "شکریہ۔ ہمیں آپ کی انکوائری مل گئی ہے اور ہم ایک ورکنگ ڈے کے اندر جواب دیں گے۔",
+    failure: "آپ کی انکوائری بھیجی نہیں جا سکی۔ دوبارہ کوشش کریں۔",
+    characters: (count: number) => `${count} / 1000 حروف`,
+    errors: {
+      companyName: "کمپنی کا نام 2 سے 120 حروف کے درمیان ہونا چاہیے۔",
+      customerName: "آپ کا نام 2 سے 80 حروف کے درمیان ہونا چاہیے۔",
+      email: "درست ای میل درج کریں۔",
+      phoneNumber: "درست فون نمبر درج کریں۔",
+      projectDetails: "پروجیکٹ کی تفصیل 30 سے 1000 حروف کے درمیان ہونی چاہیے۔",
+      tooManyFiles: "براہِ کرم صرف ایک فائل اپ لوڈ کریں۔",
+      fileTooLarge: "فائل 10MB یا اس سے کم ہونی چاہیے۔",
+      unsupportedFileType: "براہِ کرم JPG، JPEG، PNG، WEBP، یا ZIP فائل اپ لوڈ کریں۔",
+    },
+  },
+} as const
+
+export function getContactPage(locale: Locale) {
+  return locale === "ur" ? contactPageUr : contactPage
+}

@@ -1,13 +1,15 @@
 "use client"
 
 import { useState } from "react"
-import { ui } from "@/lib/content/ui"
+import { getUi } from "@/lib/content/ui"
+import type { Locale } from "@/lib/i18n"
 
 type MobileMenuSheetComponent = typeof import("./mobile-menu-sheet")["MobileMenuSheet"]
 
-export function MobileMenuTrigger() {
+export function MobileMenuTrigger({ locale }: { locale: Locale }) {
   const [open, setOpen] = useState(false)
   const [SheetComponent, setSheetComponent] = useState<MobileMenuSheetComponent | null>(null)
+  const ui = getUi(locale)
 
   async function openMenu() {
     const menuSheet = await import("./mobile-menu-sheet")
@@ -29,7 +31,7 @@ export function MobileMenuTrigger() {
           <span className="block h-px w-full bg-ink" />
         </span>
       </button>
-      {SheetComponent ? <SheetComponent open={open} onOpenChange={setOpen} /> : null}
+      {SheetComponent ? <SheetComponent open={open} onOpenChange={setOpen} locale={locale} /> : null}
     </div>
   )
 }

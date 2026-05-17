@@ -24,11 +24,8 @@ Kaattex is a public marketing website for a 27-year industrial embroidery manufa
 
 ## Before launch
 
-- [ ] Replace the remaining `[TO BE PROVIDED]` placeholder in `lib/content/site.ts` (Google Maps embed URL).
-- [ ] Add real client logos to `public/images/clients/`.
 - [ ] Generate and add all images per `IMAGE_GENERATION_PLAN.md`.
 - [ ] Add Cloudflare Pages environment variables for the live inquiry flow: `RESEND_API_KEY`, `INQUIRY_TO_EMAIL`, and `INQUIRY_FROM_EMAIL`.
-- [ ] Add real Google Maps embed URL (use Maps → Share → Embed a map — short-links do **not** work).
 - [ ] Add `brochure.pdf` to `public/` if a brochure is to be offered.
 - [ ] Run Lighthouse and verify scores.
 - [ ] Run `axe-core` and verify zero errors.
@@ -48,12 +45,12 @@ The production-ready static export is written to `out/`.
 
 Two deployment paths work:
 
-1. **Direct Upload** — build locally, then upload the contents of `out/` in Cloudflare Pages. This is the simplest path for a first launch.
+1. **Direct Upload** — build locally, then upload the contents of `out/` in Cloudflare Pages.
 2. **Git integration** — connect a GitHub repository, use the **Next.js (Static HTML Export)** preset, set the build command to `pnpm build`, and set the output directory to `out`.
 
 For the root domain `kaattex.com`, Cloudflare Pages requires the domain to use Cloudflare nameservers. Before changing nameservers, copy the existing Namecheap email DNS records into Cloudflare so `info@kaattex.com` keeps working.
 
-When final photography is ready, add the prepared WebP files under `public/images/`, rebuild, and redeploy the new `out/` folder. No hosting architecture change is needed.
+When final photography is ready, add the prepared WebP files under `public/images/`, rebuild, and redeploy. No hosting architecture change is needed.
 
 ## Inquiry form integration
 
@@ -69,14 +66,14 @@ Production inquiries are handled by `functions/api/inquiry.ts`, a Cloudflare Pag
 Set these Cloudflare Pages environment variables before launch:
 
 - `RESEND_API_KEY`
-- `INQUIRY_TO_EMAIL` â€” recommended: `info@kaattex.com`
-- `INQUIRY_FROM_EMAIL` â€” a verified sender such as `Kaattex <inquiries@kaattex.com>`
+- `INQUIRY_TO_EMAIL` — recommended: `info@kaattex.com`
+- `INQUIRY_FROM_EMAIL` — a verified sender such as `Kaattex <inquiries@kaattex.com>`
 
 For local `pnpm dev`, `app/api/inquiry/route.ts` remains a development-only stub so the form can be tested without sending real email.
 
 ## Internationalization
 
-`next-intl` is scaffolded with English messages in `messages/en.json` and an empty Urdu mirror in `messages/ur.json`. To add Urdu later, fill the matching Urdu values, introduce locale routing, and connect the language switcher when content is ready.
+English is the default site language. A full Urdu version lives under `/ur`, with a site-wide language toggle in the header and mobile menu. Urdu copy is maintained alongside the English content in `lib/content/*.ts`, while `messages/en.json` and `messages/ur.json` preserve the original `next-intl` message catalogs for future expansion.
 
 ## Recommended checks
 

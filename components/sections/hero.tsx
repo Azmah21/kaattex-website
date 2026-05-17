@@ -4,13 +4,17 @@ import { Eyebrow } from "@/components/primitives/eyebrow"
 import { OptimizedImage } from "@/components/primitives/optimized-image"
 import { Reveal } from "@/components/primitives/reveal"
 import { Button } from "@/components/ui/button"
-import { home } from "@/lib/content/home"
+import { getHome } from "@/lib/content/home"
+import type { Locale } from "@/lib/i18n"
 
 type HeroProps = {
   hasHeroImage: boolean
+  locale: Locale
 }
 
-export function Hero({ hasHeroImage }: HeroProps) {
+export function Hero({ hasHeroImage, locale }: HeroProps) {
+  const home = getHome(locale)
+
   return (
     <section
       aria-labelledby="home-hero-title"

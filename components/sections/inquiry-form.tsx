@@ -1,6 +1,6 @@
 "use client"
 
-import { useMemo, useRef, useState } from "react"
+import { useRef, useState } from "react"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { toast } from "sonner"
@@ -9,15 +9,17 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { contactPage } from "@/lib/content/contact"
+import { getContactPage } from "@/lib/content/contact"
+import type { Locale } from "@/lib/i18n"
 
 const MAX_FILE_SIZE = 10 * 1024 * 1024
 const ACCEPTED_EXTENSIONS = [".jpg", ".jpeg", ".png", ".webp", ".zip"]
 
-export function InquiryForm() {
+export function InquiryForm({ locale }: { locale: Locale }) {
   const fileInputRef = useRef<HTMLInputElement | null>(null)
   const [file, setFile] = useState<File | null>(null)
   const [submitted, setSubmitted] = useState(false)
+  const contactPage = getContactPage(locale)
   const inquirySchema = z.object({
     companyName: z
       .string()
@@ -59,14 +61,14 @@ export function InquiryForm() {
   const projectDetails = watch("projectDetails")
   const characterCount = projectDetails.length
 
-  const fileError = useMemo(() => {
+  const fileError = (() => {
     if (!file) return null
     if (file.size > MAX_FILE_SIZE) return contactPage.form.errors.fileTooLarge
     if (!ACCEPTED_EXTENSIONS.some((extension) => file.name.toLowerCase().endsWith(extension))) {
       return contactPage.form.errors.unsupportedFileType
     }
     return null
-  }, [file])
+  })()
 
   async function onSubmit(values: InquiryValues) {
     if (fileError) {
