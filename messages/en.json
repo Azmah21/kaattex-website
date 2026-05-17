@@ -1,0 +1,50 @@
+{
+  "header": {
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "inquire": "Inquire"
+  },
+  "contact": {
+    "introEyebrow": "CONTACT",
+    "introTitle": "Let's talk about your program.",
+    "introSubtitle": "We respond to inquiries within one working day.",
+    "visit": "Visit",
+    "call": "Call",
+    "write": "Write",
+    "whatsapp": "WhatsApp",
+    "whatsappLink": "Start chat",
+    "whatsappMessage": "Hello Kaattex, I would like to discuss an embroidery program.",
+    "mapFallback": "Map loading. If this persists, see contact details above.",
+    "form": {
+      "companyName": "Company name",
+      "customerName": "Customer name",
+      "email": "Email",
+      "phoneNumber": "Phone number",
+      "projectDetails": "Project details",
+      "attachment": "Reference file",
+      "attachmentHint": "Upload one JPG, JPEG, PNG, WEBP, or ZIP file. Maximum 10MB.",
+      "removeFile": "Remove file",
+      "sendInquiry": "Send inquiry",
+      "success": "Thank you. We've received your inquiry and will respond within one working day.",
+      "failure": "We couldn't send your inquiry. Please try again.",
+      "characters": "{count} / 1000 characters",
+      "errors": {
+        "companyName": "Company name must be between 2 and 120 characters.",
+        "customerName": "Customer name must be between 2 and 80 characters.",
+        "email": "Please enter a valid email address.",
+        "phoneNumber": "Please enter a valid phone number.",
+        "projectDetails": "Project details must be between 30 and 1000 characters.",
+        "tooManyFiles": "Please upload only one file.",
+        "fileTooLarge": "The file must be 10MB or smaller.",
+        "unsupportedFileType": "Please upload a JPG, JPEG, PNG, WEBP, or ZIP file."
+      }
+    }
+  },
+  "faq": {
+    "open": "Open answer",
+    "close": "Close answer"
+  },
+  "shared": {
+    "loading": "Loading"
+  }
+}

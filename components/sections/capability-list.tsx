@@ -1,0 +1,37 @@
+import { Container } from "@/components/layout/container"
+import { ArrowLink } from "@/components/primitives/arrow-link"
+import { Divider } from "@/components/primitives/divider"
+import { Eyebrow } from "@/components/primitives/eyebrow"
+import { Reveal } from "@/components/primitives/reveal"
+import { home } from "@/lib/content/home"
+
+export function CapabilityList() {
+  return (
+    <section aria-labelledby="home-capabilities-title" className="py-24 md:py-32">
+      <Container>
+        <Reveal>
+          <Eyebrow>{home.capabilities.eyebrow}</Eyebrow>
+          <h2 id="home-capabilities-title" className="mt-6 max-w-4xl text-display-xl">
+            {home.capabilities.title}
+          </h2>
+        </Reveal>
+
+        <div className="mt-16">
+          {home.capabilities.items.map((item) => (
+            <Reveal key={item.name}>
+              <div className="grid gap-6 py-8 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] md:items-baseline">
+                <h3 className="text-display-lg">{item.name}</h3>
+                <p className="text-body-lg text-graphite">{item.summary}</p>
+              </div>
+              <Divider />
+            </Reveal>
+          ))}
+        </div>
+
+        <Reveal className="mt-10">
+          <ArrowLink href={home.capabilities.link.href}>{home.capabilities.link.label}</ArrowLink>
+        </Reveal>
+      </Container>
+    </section>
+  )
+}

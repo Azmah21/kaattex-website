@@ -1,0 +1,50 @@
+{
+  "header": {
+    "openMenu": "",
+    "closeMenu": "",
+    "inquire": ""
+  },
+  "contact": {
+    "introEyebrow": "",
+    "introTitle": "",
+    "introSubtitle": "",
+    "visit": "",
+    "call": "",
+    "write": "",
+    "whatsapp": "",
+    "whatsappLink": "",
+    "whatsappMessage": "",
+    "mapFallback": "",
+    "form": {
+      "companyName": "",
+      "customerName": "",
+      "email": "",
+      "phoneNumber": "",
+      "projectDetails": "",
+      "attachment": "",
+      "attachmentHint": "",
+      "removeFile": "",
+      "sendInquiry": "",
+      "success": "",
+      "failure": "",
+      "characters": "",
+      "errors": {
+        "companyName": "",
+        "customerName": "",
+        "email": "",
+        "phoneNumber": "",
+        "projectDetails": "",
+        "tooManyFiles": "",
+        "fileTooLarge": "",
+        "unsupportedFileType": ""
+      }
+    }
+  },
+  "faq": {
+    "open": "",
+    "close": ""
+  },
+  "shared": {
+    "loading": ""
+  }
+}
