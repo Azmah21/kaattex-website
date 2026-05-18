@@ -25,14 +25,14 @@ Kaattex is a public marketing website for a 27-year industrial embroidery manufa
 ## Before launch
 
 - [ ] Generate and add all images per `IMAGE_GENERATION_PLAN.md`.
-- [ ] Add Cloudflare Pages environment variables for the live inquiry flow: `RESEND_API_KEY`, `INQUIRY_TO_EMAIL`, and `INQUIRY_FROM_EMAIL`.
+- [ ] Add an email notification for Netlify form submissions so inquiries are delivered to `info@kaattex.com`.
 - [ ] Add `brochure.pdf` to `public/` if a brochure is to be offered.
 - [ ] Run Lighthouse and verify scores.
 - [ ] Run `axe-core` and verify zero errors.
 
 ## Deployment
 
-The project is configured for a static Cloudflare Pages deployment. Before building for production, set `NEXT_PUBLIC_SITE_URL` so canonical URLs, the sitemap, and robots metadata point at the live domain:
+The project is configured for a static Netlify deployment, with Cloudflare used only for DNS. Before building for production, set `NEXT_PUBLIC_SITE_URL` so canonical URLs, the sitemap, and robots metadata point at the live domain:
 
 ```powershell
 $env:NEXT_PUBLIC_SITE_URL="https://kaattex.com"
@@ -41,20 +41,22 @@ pnpm build
 
 The production-ready static export is written to `out/`.
 
-### Cloudflare Pages
+### Netlify
 
-Two deployment paths work:
+Recommended deployment path:
 
-1. **Direct Upload** — build locally, then upload the contents of `out/` in Cloudflare Pages.
-2. **Git integration** — connect a GitHub repository, use the **Next.js (Static HTML Export)** preset, set the build command to `pnpm build`, and set the output directory to `out`.
-
-For the root domain `kaattex.com`, Cloudflare Pages requires the domain to use Cloudflare nameservers. Before changing nameservers, copy the existing Namecheap email DNS records into Cloudflare so `info@kaattex.com` keeps working.
+1. Connect the GitHub repository in Netlify.
+2. Use the included `netlify.toml` file. It sets the build command to `pnpm build`, the publish directory to `out`, and Node 20.
+3. Add `kaattex.com` and `www.kaattex.com` as custom domains.
+4. Keep Cloudflare as DNS only and point the domain records at Netlify after the Netlify deployment is healthy.
 
 When final photography is ready, add the prepared WebP files under `public/images/`, rebuild, and redeploy. No hosting architecture change is needed.
 
+Cloudflare Pages remains a temporary fallback only while the Netlify cutover is being verified.
+
 ## Inquiry form integration
 
-Production inquiries are handled by `functions/api/inquiry.ts`, a Cloudflare Pages Function that accepts `multipart/form-data`, validates the fields, and sends the inquiry through Resend. The form accepts:
+Production inquiries are handled by Netlify Forms. The form is detected at build time and accepts:
 
 - Customer name
 - Company name
@@ -63,13 +65,9 @@ Production inquiries are handled by `functions/api/inquiry.ts`, a Cloudflare Pag
 - Project details
 - One JPG, JPEG, PNG, WEBP, or ZIP attachment up to 10MB
 
-Set these Cloudflare Pages environment variables before launch:
+After the first successful deploy, add a Netlify form email notification for the `inquiry` form so submissions are delivered to `info@kaattex.com`.
 
-- `RESEND_API_KEY`
-- `INQUIRY_TO_EMAIL` — recommended: `info@kaattex.com`
-- `INQUIRY_FROM_EMAIL` — a verified sender such as `Kaattex <inquiries@kaattex.com>`
-
-For local `pnpm dev`, `app/api/inquiry/route.ts` remains a development-only stub so the form can be tested without sending real email.
+`functions/api/inquiry.ts` remains in the repository only as a Cloudflare rollback path during migration.
 
 ## Internationalization
 

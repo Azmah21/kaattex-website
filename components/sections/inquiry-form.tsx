@@ -78,6 +78,7 @@ export function InquiryForm({ locale }: { locale: Locale }) {
 
     try {
       const payload = new FormData()
+      payload.set("form-name", "inquiry")
       payload.set("companyName", values.companyName)
       payload.set("customerName", values.customerName)
       payload.set("email", values.email)
@@ -88,7 +89,7 @@ export function InquiryForm({ locale }: { locale: Locale }) {
         payload.set("attachment", file)
       }
 
-      const response = await fetch("/api/inquiry", {
+      const response = await fetch("/", {
         method: "POST",
         body: payload,
       })
@@ -124,7 +125,16 @@ export function InquiryForm({ locale }: { locale: Locale }) {
   }
 
   return (
-    <form className="space-y-10" onSubmit={handleSubmit(onSubmit)} noValidate>
+    <form
+      name="inquiry"
+      method="POST"
+      data-netlify="true"
+      encType="multipart/form-data"
+      className="space-y-10"
+      onSubmit={handleSubmit(onSubmit)}
+      noValidate
+    >
+      <input type="hidden" name="form-name" value="inquiry" />
       <div className="grid gap-10 md:grid-cols-2">
         <Field
           id="customerName"

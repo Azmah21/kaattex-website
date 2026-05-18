@@ -3,6 +3,7 @@ import { Container } from "@/components/layout/container"
 import { Eyebrow } from "@/components/primitives/eyebrow"
 import { Reveal } from "@/components/primitives/reveal"
 import { InquiryForm } from "@/components/sections/inquiry-form"
+import { NetlifyFormDetector } from "@/components/sections/netlify-form-detector"
 import { Toaster } from "@/components/ui/sonner"
 import { getContactPage } from "@/lib/content/contact"
 import { getSite } from "@/lib/content/site"
@@ -34,6 +35,7 @@ export function ContactPageContent({ locale }: { locale: Locale }) {
   return (
     <main>
       <Toaster />
+      <NetlifyFormDetector />
       <section aria-labelledby="contact-title" className="py-24 md:py-32">
         <Container>
           <Reveal>
