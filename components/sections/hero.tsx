@@ -18,7 +18,7 @@ export function Hero({ hasHeroImage, locale }: HeroProps) {
   return (
     <section
       aria-labelledby="home-hero-title"
-      className="relative flex min-h-[64svh] items-end overflow-hidden sm:min-h-[68vh]"
+      className="relative flex min-h-[64svh] items-end overflow-hidden sm:min-h-[60vh] lg:min-h-[64vh]"
     >
       <div data-header-sentinel className="absolute left-0 top-0 h-px w-px" />
       {hasHeroImage ? (
@@ -36,7 +36,7 @@ export function Hero({ hasHeroImage, locale }: HeroProps) {
       )}
       <div className="absolute inset-0 bg-bone/30" aria-hidden="true" />
 
-      <Container className="relative z-10 py-10 sm:py-16 md:py-20">
+      <Container className="relative z-10 py-10 sm:py-12 md:py-14">
         <Reveal className="max-w-5xl">
           <Eyebrow>{home.hero.eyebrow}</Eyebrow>
           <h1
