@@ -23,7 +23,6 @@ export const site = {
   description:
     "Kaattex is an industrial embroidery manufacturer in Faisalabad, Punjab, producing precision embroidery, sequin work, appliqué, and puff embroidery for apparel and home-textile manufacturers across Pakistan and abroad.",
   nav: [
-    { label: "Work", href: "/work" },
     { label: "Capabilities", href: "/capabilities" },
     { label: "About", href: "/about" },
     { label: "Clients", href: "/clients" },
@@ -45,7 +44,6 @@ export const siteUr = {
   description:
     "Kaattex فیصل آباد کا ایک کڑھائی ساز ادارہ ہے جو پاکستان اور بیرونِ ملک ملبوسات اور ہوم ٹیکسٹائل برانڈز کے لیے نفیس کڑھائی، سیکوئن ورک، اپلیکے، اور پف کڑھائی تیار کرتا ہے۔",
   nav: [
-    { label: "کام", href: withLocalePath("/work", "ur") },
     { label: "صلاحیتیں", href: withLocalePath("/capabilities", "ur") },
     { label: "تعارف", href: withLocalePath("/about", "ur") },
     { label: "کلائنٹس", href: withLocalePath("/clients", "ur") },

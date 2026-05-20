@@ -46,7 +46,7 @@ All images go into `public/images/` in the Next.js project, organized into subfo
 ---
 
 ### 3.2 Gallery / Work (the embroidery showcase)
-**12 images. `public/images/gallery/gallery-01.jpg` through `gallery-12.jpg` — each 1600×2000 (4:5 portrait), 85% WebP.**
+**Removed from v1.** Do not generate or add `public/images/gallery/*` assets unless the public work gallery returns to scope.
 
 The gallery is divided into four categories. Generate **3 images per category** for visual variety. All must read as part of the same shoot — same lighting language, same restrained palette, same level of polish.
 
@@ -158,3 +158,6 @@ Before handing images to CODEX (or before launch), check:
 - [ ] All filenames match the spec exactly (lowercase, hyphens, no spaces)
 
 If any image fails — regenerate. Half-good imagery is the fastest way back to "generic and cheap."
+# Current direction
+
+The public work/gallery section has been removed. Do not generate or add gallery images for v1 unless the client reverses that decision. Optional future photography should prioritize the factory floor, Barudan machinery, production capacity, and environmental details rather than finished-work samples.

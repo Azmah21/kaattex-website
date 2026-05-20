@@ -24,7 +24,7 @@ Kaattex is a public marketing website for a 27-year industrial embroidery manufa
 
 ## Before launch
 
-- [ ] Generate and add all images per `IMAGE_GENERATION_PLAN.md`.
+- [ ] Add final factory or machine photography only if it strengthens the capacity story; there is no public work gallery in this version.
 - [ ] Add an email notification for Netlify form submissions so inquiries are delivered to `info@kaattex.com`.
 - [ ] Add `brochure.pdf` to `public/` if a brochure is to be offered.
 - [ ] Run Lighthouse and verify scores.
@@ -50,7 +50,7 @@ Recommended deployment path:
 3. Add `kaattex.com` and `www.kaattex.com` as custom domains.
 4. Keep Cloudflare as DNS only and point the domain records at Netlify after the Netlify deployment is healthy.
 
-When final photography is ready, add the prepared WebP files under `public/images/`, rebuild, and redeploy. No hosting architecture change is needed.
+If final factory or machine photography is added later, place prepared WebP files under `public/images/`, rebuild, and redeploy. No hosting architecture change is needed.
 
 Cloudflare Pages remains a temporary fallback only while the Netlify cutover is being verified.
 

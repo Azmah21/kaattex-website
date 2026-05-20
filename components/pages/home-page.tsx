@@ -2,7 +2,6 @@ import { CapabilityList } from "@/components/sections/capability-list"
 import { ClientMarquee } from "@/components/sections/client-marquee"
 import { Hero } from "@/components/sections/hero"
 import { StatBand } from "@/components/sections/stat-band"
-import { WorkGrid } from "@/components/sections/work-grid"
 import { Container } from "@/components/layout/container"
 import { ArrowLink } from "@/components/primitives/arrow-link"
 import { Eyebrow } from "@/components/primitives/eyebrow"
@@ -10,7 +9,6 @@ import { Reveal } from "@/components/primitives/reveal"
 import { getClients } from "@/lib/content/clients"
 import { getHome } from "@/lib/content/home"
 import { getSite } from "@/lib/content/site"
-import { getWork } from "@/lib/content/work"
 import { hasPublicAsset } from "@/lib/assets"
 import type { Locale } from "@/lib/i18n"
 
@@ -18,21 +16,6 @@ export function HomePageContent({ locale }: { locale: Locale }) {
   const home = getHome(locale)
   const clients = getClients(locale)
   const site = getSite(locale)
-  const work = getWork(locale)
-  const workPreviewSources = [
-    "/images/gallery/gallery-01.jpg",
-    "/images/gallery/gallery-05.jpg",
-    "/images/gallery/gallery-09.jpg",
-  ]
-  const workPreview = workPreviewSources.map((src) => {
-    const image = work.images.find((item) => item.src === src)
-
-    return {
-      src,
-      alt: image?.alt ?? "",
-      exists: hasPublicAsset(src),
-    }
-  })
   const clientItems = clients.items.map((client) => ({
     ...client,
     exists: hasPublicAsset(client.logo),
@@ -87,7 +70,6 @@ export function HomePageContent({ locale }: { locale: Locale }) {
       </section>
 
       <CapabilityList locale={locale} />
-      <WorkGrid images={workPreview} locale={locale} />
       <ClientMarquee clients={clientItems} locale={locale} />
 
       <section aria-labelledby="home-inquiry-title" className="bg-ivory py-24 md:py-32">

@@ -7,7 +7,7 @@ export const home = {
     title: "Embroidery, at the scale of industry. At the standard of craft.",
     description:
       "Twenty Barudan machines, one quiet obsession with thread, quality, and customer service. Trusted by Pakistan's leading apparel and textile houses for twenty-seven years.",
-    primaryLink: { label: "See our work", href: "/work" },
+    primaryLink: { label: "View capabilities", href: "/capabilities" },
     secondaryLink: { label: "Make an inquiry", href: "/contact" },
   },
   stats: [
@@ -59,9 +59,6 @@ export const home = {
     ],
     link: { label: "See all capabilities", href: "/capabilities" },
   },
-  work: {
-    link: { label: "See the full archive", href: "/work" },
-  },
   clients: {
     eyebrow: "CLIENTS",
     title: "Trusted by Pakistan's textile houses.",
@@ -80,7 +77,7 @@ export const homeUr = {
     title: "صنعتی پیمانے پر کڑھائی۔ دستکاری کے معیار کے ساتھ۔",
     description:
       "بیس باروڈان مشینیں، اور دھاگے، معیار، اور خدمتِ مشتری کے لیے ایک خاموش لگن۔ ستائیس برس سے پاکستان کے نمایاں ملبوسات اور ٹیکسٹائل اداروں کا اعتماد۔",
-    primaryLink: { label: "ہمارا کام دیکھیں", href: withLocalePath("/work", "ur") },
+    primaryLink: { label: "صلاحیتیں دیکھیں", href: withLocalePath("/capabilities", "ur") },
     secondaryLink: { label: "رابطہ کریں", href: withLocalePath("/contact", "ur") },
   },
   stats: [
@@ -131,9 +128,6 @@ export const homeUr = {
       },
     ],
     link: { label: "تمام صلاحیتیں دیکھیں", href: withLocalePath("/capabilities", "ur") },
-  },
-  work: {
-    link: { label: "مکمل آرکائیو دیکھیں", href: withLocalePath("/work", "ur") },
   },
   clients: {
     eyebrow: "کلائنٹس",

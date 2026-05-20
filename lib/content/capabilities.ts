@@ -9,8 +9,6 @@ export const capabilities = {
   items: [
     {
       name: "Custom logo & monogram embroidery",
-      image: "/images/gallery/gallery-01.jpg",
-      alt: "Close view of monogram embroidery on apparel fabric.",
       description:
         "We reproduce brand marks with disciplined spacing, edge quality, and thread coverage across garments and textiles. The aim is not simply recognition, but consistency: the first piece and the final piece should feel like members of the same family.",
       bullets: [
@@ -22,8 +20,6 @@ export const capabilities = {
     },
     {
       name: "Decorative pattern embroidery",
-      image: "/images/gallery/gallery-04.jpg",
-      alt: "Decorative embroidery detail on a textile surface.",
       description:
         "Decorative embroidery relies on cadence, not clutter. We build repeat patterns, borders, and tonal fields that preserve their visual rhythm over long runs while staying aligned with the material underneath.",
       bullets: [
@@ -35,8 +31,6 @@ export const capabilities = {
     },
     {
       name: "Sequin embroidery",
-      image: "/images/gallery/gallery-07.jpg",
-      alt: "Sequin and thread embroidery detail.",
       description:
         "Sequin work introduces light into the surface. We pair sequins with thread in controlled compositions that keep the design readable, the hand-feel considered, and the finish appropriate to the garment.",
       bullets: [
@@ -48,8 +42,6 @@ export const capabilities = {
     },
     {
       name: "Appliqué embroidery",
-      image: "/images/gallery/gallery-10.jpg",
-      alt: "Layered appliqué embroidery with stitched finishing.",
       description:
         "Appliqué adds another plane to the work. We combine cut fabric and embroidery so each layer contributes shape, texture, and contrast without turning the piece into ornament for ornament's sake.",
       bullets: [
@@ -61,8 +53,6 @@ export const capabilities = {
     },
     {
       name: "Puff (3D) embroidery",
-      image: "/images/gallery/gallery-12.jpg",
-      alt: "Raised puff embroidery on apparel fabric.",
       description:
         "Puff embroidery is useful when a mark needs physical presence. We create raised foam-backed stitching for select garments and accessories, holding shape and edge definition while preserving an industrially repeatable result.",
       bullets: [
@@ -90,8 +80,6 @@ export const capabilitiesUr = {
   items: [
     {
       name: "حسبِ ضرورت لوگو اور مونوگرام کڑھائی",
-      image: "/images/gallery/gallery-01.jpg",
-      alt: "ملبوساتی کپڑے پر مونوگرام کڑھائی کا قریب سے منظر۔",
       description:
         "ہم لباس اور ٹیکسٹائل پر برانڈ مارکس کو منظم فاصلوں، صاف کناروں، اور درست دھاگہ کوریج کے ساتھ دوبارہ بناتے ہیں۔ مقصد صرف پہچان نہیں، مستقل مزاجی ہے: پہلا پیس اور آخری پیس ایک ہی خاندان کے محسوس ہونے چاہییں۔",
       bullets: [
@@ -103,8 +91,6 @@ export const capabilitiesUr = {
     },
     {
       name: "آرائشی پیٹرن کڑھائی",
-      image: "/images/gallery/gallery-04.jpg",
-      alt: "ٹیکسٹائل سطح پر آرائشی کڑھائی کی تفصیل۔",
       description:
         "آرائشی کڑھائی شور نہیں، لے مانگتی ہے۔ ہم ریپیٹ پیٹرن، بارڈرز، اور ٹونل فیلڈز بناتے ہیں جو طویل رنز میں بھی اپنی بصری روانی برقرار رکھیں اور نیچے کے مادے کے ساتھ ہم آہنگ رہیں۔",
       bullets: [
@@ -116,8 +102,6 @@ export const capabilitiesUr = {
     },
     {
       name: "سیکوئن کڑھائی",
-      image: "/images/gallery/gallery-07.jpg",
-      alt: "سیکوئن اور دھاگے کی کڑھائی کی تفصیل۔",
       description:
         "سیکوئن ورک سطح پر روشنی شامل کرتا ہے۔ ہم سیکوئن اور دھاگے کو ایسی قابو شدہ ترکیبوں میں ملاتے ہیں جہاں ڈیزائن واضح رہے، ہینڈ فیل سوچا سمجھا ہو، اور تکمیل لباس کے مطابق محسوس ہو۔",
       bullets: [
@@ -129,8 +113,6 @@ export const capabilitiesUr = {
     },
     {
       name: "اپلیکے کڑھائی",
-      image: "/images/gallery/gallery-10.jpg",
-      alt: "تہہ دار اپلیکے کڑھائی، سلائی شدہ تکمیل کے ساتھ۔",
       description:
         "اپلیکے کام میں ایک اور سطح شامل کرتا ہے۔ ہم کٹے ہوئے کپڑے اور کڑھائی کو یوں ملاتے ہیں کہ ہر تہہ شکل، ساخت، اور تضاد بڑھائے، مگر پیس محض سجاوٹ بن کر نہ رہ جائے۔",
       bullets: [
@@ -142,8 +124,6 @@ export const capabilitiesUr = {
     },
     {
       name: "پف (3D) کڑھائی",
-      image: "/images/gallery/gallery-12.jpg",
-      alt: "ملبوساتی کپڑے پر ابھری ہوئی پف کڑھائی۔",
       description:
         "جب کسی مارک کو جسمانی موجودگی درکار ہو تو پف کڑھائی مفید ہوتی ہے۔ ہم منتخب ملبوسات اور ایکسیسریز کے لیے ابھری ہوئی فوم بیکڈ سلائی بناتے ہیں، جہاں شکل اور کناروں کی صفائی برقرار رہتی ہے اور نتیجہ صنعتی طور پر دہرایا جا سکتا ہے۔",
       bullets: [

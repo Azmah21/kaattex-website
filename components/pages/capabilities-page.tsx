@@ -3,12 +3,10 @@ import path from "node:path"
 import { Container } from "@/components/layout/container"
 import { ArrowLink } from "@/components/primitives/arrow-link"
 import { Eyebrow } from "@/components/primitives/eyebrow"
-import { OptimizedImage } from "@/components/primitives/optimized-image"
 import { Reveal } from "@/components/primitives/reveal"
 import { Button } from "@/components/ui/button"
 import { getCapabilities } from "@/lib/content/capabilities"
 import { getUi } from "@/lib/content/ui"
-import { hasPublicAsset } from "@/lib/assets"
 import type { Locale } from "@/lib/i18n"
 
 export function CapabilitiesPageContent({ locale }: { locale: Locale }) {
@@ -37,33 +35,20 @@ export function CapabilitiesPageContent({ locale }: { locale: Locale }) {
       </section>
 
       <section aria-label={ui.accessibility.capabilityDetails} className="pb-24 md:pb-32">
-        <Container className="space-y-24 md:space-y-32">
+        <Container>
           {capabilities.items.map((item, index) => {
-            const reverse = index % 2 === 1
-            const imageExists = hasPublicAsset(item.image)
-
             return (
               <Reveal
                 key={item.name}
-                className={`grid gap-10 md:grid-cols-2 md:items-center md:gap-16 ${reverse ? "md:[&>*:first-child]:order-2" : ""}`}
+                className={`border-t border-rule py-16 last:border-b md:grid md:grid-cols-[minmax(0,0.7fr)_minmax(0,1fr)] md:gap-20 ${
+                  index === 0 ? "pt-0" : ""
+                }`}
               >
-                <div className="relative aspect-[4/5] overflow-hidden">
-                  {imageExists ? (
-                    <OptimizedImage
-                      src={item.image}
-                      alt={item.alt}
-                      width={1600}
-                      height={2000}
-                      sizes="(min-width: 768px) 50vw, 100vw"
-                      className="absolute inset-0 h-full w-full object-cover"
-                    />
-                  ) : (
-                    <div className="image-fallback absolute inset-0" aria-hidden="true" />
-                  )}
-                </div>
-
                 <div>
-                  <h2 className="text-display-xl">{item.name}</h2>
+                  <p className="font-display text-display-lg text-ash">{String(index + 1).padStart(2, "0")}</p>
+                  <h2 className="mt-6 text-display-xl md:mt-10">{item.name}</h2>
+                </div>
+                <div className="mt-8 md:mt-0">
                   <p className="mt-8 text-body-lg text-graphite">{item.description}</p>
                   <ul className="mt-10 border-t border-rule">
                     {item.bullets.map((bullet) => (
@@ -95,4 +80,3 @@ export function CapabilitiesPageContent({ locale }: { locale: Locale }) {
     </main>
   )
 }
-

@@ -16,11 +16,6 @@ export const seo = {
     description:
       "Logo embroidery, decorative patterns, sequins, appliqué, and puff embroidery for apparel and textile manufacturers in Faisalabad and across Pakistan.",
   },
-  work: {
-    title: "Embroidery Work — Kaattex",
-    description:
-      "View recent commercial embroidery programs across apparel, home textiles, sportswear, and detailed stitch work produced by Kaattex in Faisalabad.",
-  },
   clients: {
     title: "Clients — Kaattex Embroidery",
     description:
@@ -53,11 +48,6 @@ export const seoUr = {
     title: "صلاحیتیں — Kaattex",
     description:
       "لوگو کڑھائی، آرائشی پیٹرنز، سیکوئن، اپلیکے، اور پف کڑھائی سمیت Kaattex کی پیداواری صلاحیتیں دیکھیے۔",
-  },
-  work: {
-    title: "کام — Kaattex",
-    description:
-      "ملبوسات، ہوم ٹیکسٹائل، اسپورٹس ویئر، اور باریک سلائی کے حالیہ Kaattex پروگراموں کا جاری آرکائیو دیکھیے۔",
   },
   clients: {
     title: "کلائنٹس — Kaattex",
