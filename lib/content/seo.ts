@@ -4,7 +4,7 @@ export const seo = {
   home: {
     title: "Industrial Embroidery Manufacturer in Faisalabad — Kaattex",
     description:
-      "Industrial embroidery manufacturer in Faisalabad, Punjab, operating 20 Barudan machines for apparel and textile manufacturers across Pakistan.",
+      "Faisalabad embroidery manufacturer operating 20 multi-head Barudan machines for B2B apparel and textile programs across Pakistan.",
   },
   about: {
     title: "About Kaattex — Faisalabad Embroidery Manufacturer",
@@ -14,7 +14,7 @@ export const seo = {
   capabilities: {
     title: "Industrial Embroidery Capabilities — Kaattex",
     description:
-      "Logo embroidery, decorative patterns, sequins, appliqué, and puff embroidery for apparel and textile manufacturers in Faisalabad and across Pakistan.",
+      "Logo, sequin, appliqué, puff, and pattern embroidery on multi-head Barudan machines for textile manufacturers in Faisalabad and Pakistan.",
   },
   clients: {
     title: "Clients — Kaattex Embroidery",

@@ -41,10 +41,6 @@ const config = {
         eyebrow: ["0.75rem", { lineHeight: "1", letterSpacing: "0.16em" }],
       },
       keyframes: {
-        marquee: {
-          from: { transform: "translateX(-50%)" },
-          to: { transform: "translateX(0)" },
-        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -55,7 +51,6 @@ const config = {
         },
       },
       animation: {
-        marquee: "marquee 40s linear infinite",
         "accordion-down": "accordion-down 700ms cubic-bezier(0.22, 1, 0.36, 1)",
         "accordion-up": "accordion-up 700ms cubic-bezier(0.22, 1, 0.36, 1)",
       },

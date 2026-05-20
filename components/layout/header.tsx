@@ -9,6 +9,8 @@ import { withLocalePath } from "@/lib/i18n"
 export function Header({ locale }: { locale: Locale }) {
   const site = getSite(locale)
   const ui = getUi(locale)
+  const whatsappNumber = site.contact.whatsapp.replace(/\D/g, "")
+  const whatsappHref = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(ui.header.whatsappMessage)}`
 
   return (
     <header id="site-header" data-solid="false" className="site-header sticky top-0 z-40">
@@ -20,7 +22,7 @@ export function Header({ locale }: { locale: Locale }) {
           {site.wordmark}
         </a>
 
-        <nav aria-label={ui.accessibility.primaryNav} className="hidden items-center gap-x-10 lg:flex">
+        <nav aria-label={ui.accessibility.primaryNav} className="hidden items-center gap-x-8 lg:flex">
           {site.nav.map((item) => (
             <a
               key={item.href}
@@ -30,16 +32,28 @@ export function Header({ locale }: { locale: Locale }) {
               {item.label}
             </a>
           ))}
+          <span className="h-6 w-px bg-rule" aria-hidden="true" />
+          <LocaleToggle locale={locale} />
           <a
             href={withLocalePath("/contact", locale)}
             className="animated-underline text-body-sm font-medium text-accent transition-colors duration-200 hover:text-ink"
           >
             {ui.header.inquire}
           </a>
-          <LocaleToggle locale={locale} />
+          <a
+            href={whatsappHref}
+            target="_blank"
+            rel="noreferrer"
+            className="animated-underline text-body-sm font-medium text-ink transition-colors duration-200 hover:text-accent"
+          >
+            {ui.header.whatsapp}
+          </a>
         </nav>
 
-        <MobileMenuTrigger locale={locale} />
+        <div className="flex items-center gap-4 lg:hidden">
+          <LocaleToggle locale={locale} />
+          <MobileMenuTrigger locale={locale} />
+        </div>
       </Container>
     </header>
   )

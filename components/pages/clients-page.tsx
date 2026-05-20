@@ -18,6 +18,7 @@ export function ClientsPageContent({ locale }: { locale: Locale }) {
               {clients.intro.title}
             </h1>
             <p className="mt-8 max-w-2xl text-body-lg text-graphite">{clients.intro.subtitle}</p>
+            <p className="mt-6 max-w-3xl text-body text-ash">{clients.intro.highlight}</p>
           </Reveal>
         </Container>
       </section>
@@ -60,4 +61,3 @@ export function ClientsPageContent({ locale }: { locale: Locale }) {
     </main>
   )
 }
-

@@ -10,7 +10,7 @@ export function StatBand({ locale }: { locale: Locale }) {
   const ui = getUi(locale)
 
   return (
-    <section aria-label={ui.accessibility.companyStatistics} className="bg-ivory py-16 md:py-20">
+    <section aria-label={ui.accessibility.companyStatistics} className="bg-ivory py-12 md:py-20">
       <Container>
         <Reveal>
           <dl
@@ -21,7 +21,7 @@ export function StatBand({ locale }: { locale: Locale }) {
           >
             {home.stats.map((stat) => (
               <div key={stat.label} className="py-8 first:pt-0 last:pb-0 md:px-10 md:py-0 md:first:pl-0 md:last:pr-0">
-                <dt className="font-display text-display-xl font-light">{stat.value}</dt>
+                <dt className="font-display text-display-2xl font-light">{stat.value}</dt>
                 <dd className="mt-3 text-body-sm text-ash">{stat.label}</dd>
               </div>
             ))}

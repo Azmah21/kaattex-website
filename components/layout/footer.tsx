@@ -8,6 +8,8 @@ export function Footer({ locale }: { locale: Locale }) {
   const year = new Date().getFullYear()
   const site = getSite(locale)
   const ui = getUi(locale)
+  const whatsappNumber = site.contact.whatsapp.replace(/\D/g, "")
+  const whatsappHref = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(ui.header.whatsappMessage)}`
 
   return (
     <footer className="bg-bone py-20">
@@ -33,10 +35,19 @@ export function Footer({ locale }: { locale: Locale }) {
           <div className="space-y-3 text-body-sm text-graphite">
             <p>{site.contact.address}</p>
             <p>
-              <bdi dir="ltr">{site.contact.phone}</bdi>
+              <a href={`tel:${site.contact.phone}`} className="transition-colors duration-200 hover:text-accent">
+                <bdi dir="ltr">{site.contact.phone}</bdi>
+              </a>
             </p>
             <p>
-              <bdi dir="ltr">{site.contact.email}</bdi>
+              <a href={`mailto:${site.contact.email}`} className="transition-colors duration-200 hover:text-accent">
+                <bdi dir="ltr">{site.contact.email}</bdi>
+              </a>
+            </p>
+            <p>
+              <a href={whatsappHref} target="_blank" rel="noreferrer" className="transition-colors duration-200 hover:text-accent">
+                {ui.header.whatsapp}
+              </a>
             </p>
           </div>
         </div>

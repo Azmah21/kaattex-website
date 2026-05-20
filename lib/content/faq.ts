@@ -10,12 +10,12 @@ export const faq = {
     {
       question: "What is your minimum order quantity?",
       answer:
-        "Each project is unique. Please contact us to discuss your specific volume and we will work with you to find an arrangement that meets your needs.",
+        "We do not publish a standing minimum. Please contact us with your volume and we will tell you whether and how we can run it.",
     },
     {
       question: "What is your typical turnaround time?",
       answer:
-        "Our in-house capacity of 20 Barudan machines allows us to offer significantly faster turnaround than typical for the region. Specific timelines depend on order size and complexity — please contact us with your requirements.",
+        "Our in-house capacity of 20 Barudan machines allows us to move faster than many regional alternatives. Specific timelines depend on order size, artwork, fabric, and finishing requirements.",
     },
     {
       question: "What materials and fabrics do you work with?",
@@ -47,7 +47,7 @@ export const faq = {
     {
       question: "Do you maintain quality certifications?",
       answer:
-        "Our quality management practices follow established industry standards. Specific certification documentation is available on request for serious commercial inquiries.",
+        "We do not make public certification claims until documentation is confirmed. Quality is managed in-house, and supporting records can be shared for serious commercial inquiries.",
     },
   ],
 } as const
@@ -61,12 +61,12 @@ export const faqUr = {
     {
       question: "آپ کی کم از کم آرڈر مقدار کیا ہے؟",
       answer:
-        "ہر پروجیکٹ اپنی نوعیت میں مختلف ہوتا ہے۔ اپنی مطلوبہ مقدار پر بات کرنے کے لیے ہم سے رابطہ کریں، ہم آپ کی ضرورت کے مطابق مناسب ترتیب نکالنے کی کوشش کریں گے۔",
+        "ہم کوئی مستقل کم از کم مقدار عوامی طور پر شائع نہیں کرتے۔ اپنی مقدار کے ساتھ رابطہ کریں، ہم صاف بتا دیں گے کہ اسے کس طرح چلایا جا سکتا ہے۔",
     },
     {
       question: "آپ کا عمومی ٹرن اراؤنڈ وقت کیا ہوتا ہے؟",
       answer:
-        "ہماری اندرونی گنجائش — 20 باروڈان مشینیں — ہمیں خطے کے عمومی معیار کے مقابلے میں کہیں تیز ٹرن اراؤنڈ دینے دیتی ہے۔ حتمی ٹائم لائن آرڈر کے حجم اور پیچیدگی پر منحصر ہوتی ہے؛ اپنی ضرورت کے ساتھ ہم سے رابطہ کریں۔",
+        "ہماری اندرونی گنجائش — 20 باروڈان مشینیں — ہمیں خطے کے کئی متبادلات سے تیز حرکت کرنے دیتی ہے۔ حتمی ٹائم لائن آرڈر کے حجم، آرٹ ورک، کپڑے، اور تکمیل کی ضرورت پر منحصر ہوتی ہے۔",
     },
     {
       question: "آپ کن مٹیریلز اور کپڑوں پر کام کرتے ہیں؟",
@@ -98,7 +98,7 @@ export const faqUr = {
     {
       question: "کیا آپ کوالٹی سرٹیفیکیشن برقرار رکھتے ہیں؟",
       answer:
-        "ہمارے کوالٹی مینجمنٹ طریقۂ کار قائم شدہ صنعتی معیاروں کے مطابق ہیں۔ سنجیدہ تجارتی انکوائریز کے لیے مخصوص سرٹیفیکیشن دستاویزات درخواست پر دستیاب ہیں۔",
+        "ہم اس وقت تک کوئی عوامی سرٹیفیکیشن دعویٰ نہیں کرتے جب تک دستاویزات کی تصدیق نہ ہو جائے۔ کوالٹی اندرونی طور پر مینج کی جاتی ہے، اور سنجیدہ تجارتی انکوائریز کے لیے متعلقہ ریکارڈ شیئر کیا جا سکتا ہے۔",
     },
   ],
 } as const

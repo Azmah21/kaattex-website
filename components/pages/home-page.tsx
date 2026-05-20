@@ -27,6 +27,37 @@ export function HomePageContent({ locale }: { locale: Locale }) {
     <main>
       <Hero hasHeroImage={hasPublicAsset("/images/hero/hero-primary.jpg")} locale={locale} />
       <StatBand locale={locale} />
+      <ClientMarquee clients={clientItems} locale={locale} />
+
+      <section aria-labelledby="home-production-title" className="bg-ivory py-24 md:py-32">
+        <Container>
+          <Reveal className="grid gap-10 md:grid-cols-[minmax(0,0.8fr)_minmax(0,1fr)] md:gap-20">
+            <div>
+              <Eyebrow>{home.production.eyebrow}</Eyebrow>
+              <h2 id="home-production-title" className="mt-6 text-display-lg italic">
+                {home.production.title}
+              </h2>
+            </div>
+            <div>
+              <div className="space-y-8 text-body-lg text-graphite">
+                {home.production.paragraphs.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </div>
+              <dl className="mt-12 divide-y divide-rule border-t border-rule">
+                {home.production.facts.map((fact) => (
+                  <div key={fact.label} className="grid gap-2 py-5 md:grid-cols-[11rem_1fr]">
+                    <dt className="text-[11px] font-medium uppercase tracking-[0.16em] text-ash">{fact.label}</dt>
+                    <dd className="text-body text-graphite">{fact.value}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </Reveal>
+        </Container>
+      </section>
+
+      <CapabilityList locale={locale} />
 
       <section aria-labelledby="home-practice-title" className="py-24 md:py-32">
         <Container>
@@ -50,27 +81,6 @@ export function HomePageContent({ locale }: { locale: Locale }) {
           </Reveal>
         </Container>
       </section>
-
-      <section aria-labelledby="home-manufacturers-title" className="bg-ivory py-24 md:py-32">
-        <Container>
-          <Reveal className="grid gap-10 md:grid-cols-[minmax(0,0.8fr)_minmax(0,1fr)] md:gap-20">
-            <div>
-              <Eyebrow>{home.manufacturers.eyebrow}</Eyebrow>
-              <h2 id="home-manufacturers-title" className="mt-6 text-display-lg italic">
-                {home.manufacturers.title}
-              </h2>
-            </div>
-            <div className="space-y-8 text-body-lg text-graphite">
-              {home.manufacturers.paragraphs.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
-            </div>
-          </Reveal>
-        </Container>
-      </section>
-
-      <CapabilityList locale={locale} />
-      <ClientMarquee clients={clientItems} locale={locale} />
 
       <section aria-labelledby="home-inquiry-title" className="bg-ivory py-24 md:py-32">
         <Container>

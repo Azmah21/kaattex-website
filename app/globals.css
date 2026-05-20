@@ -173,8 +173,5 @@ body {
       transition: none;
     }
 
-    .motion-marquee {
-      animation: none !important;
-    }
   }
 }

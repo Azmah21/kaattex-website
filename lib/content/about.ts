@@ -57,7 +57,7 @@ export const about = {
     eyebrow: "THE MACHINES",
     title: "Barudan embroidery machines in Faisalabad, held to one house standard.",
     body:
-      "Twenty Barudan multi-head embroidery machines — sourced directly from Japan, maintained by an in-house technical team — let us hold consistent quality across runs that span tens of thousands of units. Capacity matters to our clients in two ways: it lets us absorb urgent timelines without compromising quality, and it lets us produce a single brand standard across the full run, head to head.",
+      "Twenty Barudan multi-head embroidery machines — sourced directly from Japan, maintained by an in-house technical team, and including machines with more than 20 heads — let us hold consistent quality across a monthly capacity of more than 200,000 units. Capacity matters to our clients in two ways: it lets us absorb urgent timelines without compromising quality, and it lets us produce a single brand standard across the full run, head to head.",
   },
   shipping: {
     eyebrow: "WHERE WE SHIP",
@@ -123,7 +123,7 @@ export const aboutUr = {
     eyebrow: "مشینیں",
     title: "جاپانی درستگی، ایک ہی گھریلو معیار کے تحت۔",
     body:
-      "جاپان سے براہِ راست حاصل کی گئی اور اندرونی تکنیکی ٹیم کے ذریعے برقرار رکھی گئی بیس باروڈان ملٹی ہیڈ مشینیں ہمیں دسیوں ہزار یونٹس تک پھیلے رنز میں بھی مستقل معیار قائم رکھنے دیتی ہیں۔ ہمارے کلائنٹس کے لیے گنجائش دو طرح سے اہم ہے: یہ ہمیں فوری ٹائم لائنز سنبھالنے دیتی ہے، اور پورے رن میں ایک ہی برانڈ معیار کو سر تا سر برقرار رکھتی ہے۔",
+      "جاپان سے براہِ راست حاصل کی گئی اور اندرونی تکنیکی ٹیم کے ذریعے برقرار رکھی گئی 20 باروڈان ملٹی ہیڈ مشینیں — جن میں 20 سے زیادہ ہیڈز والی مشینیں بھی شامل ہیں — ہمیں ماہانہ 200K+ یونٹس کی گنجائش کے ساتھ مستقل معیار قائم رکھنے دیتی ہیں۔ ہمارے کلائنٹس کے لیے گنجائش دو طرح سے اہم ہے: یہ ہمیں فوری ٹائم لائنز سنبھالنے دیتی ہے، اور پورے رن میں ایک ہی برانڈ معیار کو سر تا سر برقرار رکھتی ہے۔",
   },
   shipping: {
     eyebrow: "جہاں تک ہمارا کام پہنچتا ہے",

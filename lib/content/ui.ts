@@ -21,10 +21,13 @@ export const ui = {
     openMenu: "Open menu",
     closeMenu: "Close menu",
     inquire: "Inquire",
+    whatsapp: "WhatsApp",
+    whatsappMessage: "Hello Kaattex, I would like to discuss an embroidery program.",
   },
   language: {
-    toggleLabel: "Switch to Urdu",
-    toggleText: "اردو",
+    toggleLabel: "Choose language",
+    english: "EN",
+    urdu: "اردو",
   },
   images: {
     facilityFloor: "Kaattex production floor.",
@@ -58,10 +61,13 @@ export const uiUr = {
     openMenu: "مینو کھولیں",
     closeMenu: "مینو بند کریں",
     inquire: "رابطہ کریں",
+    whatsapp: "واٹس ایپ",
+    whatsappMessage: "السلام علیکم Kaattex، میں ایک کڑھائی پروگرام پر بات کرنا چاہتا ہوں۔",
   },
   language: {
-    toggleLabel: "انگریزی میں دیکھیں",
-    toggleText: "English",
+    toggleLabel: "زبان منتخب کریں",
+    english: "EN",
+    urdu: "اردو",
   },
   images: {
     facilityFloor: "Kaattex کا پیداواری فلور۔",

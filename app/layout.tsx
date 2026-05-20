@@ -96,6 +96,19 @@ const websiteSchema = {
   },
 }
 
+const localePersistenceScript = `
+try {
+  var match = document.cookie.match(/(?:^|; )kaattex-locale=([^;]+)/);
+  var saved = match ? decodeURIComponent(match[1]) : null;
+  var path = window.location.pathname;
+  var shouldRedirectToUr = saved === "ur" && !path.startsWith("/ur") && !path.startsWith("/api");
+  if (shouldRedirectToUr) {
+    var target = "/ur" + (path === "/" ? "" : path) + window.location.search + window.location.hash;
+    window.location.replace(target);
+  }
+} catch (error) {}
+`
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -104,6 +117,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${fraunces.variable} ${inter.variable} ${notoNastaliqUrdu.variable}`}>
       <body className="bg-bone text-ink antialiased">
+        <script dangerouslySetInnerHTML={{ __html: localePersistenceScript }} />
         {children}
         <script
           type="application/ld+json"

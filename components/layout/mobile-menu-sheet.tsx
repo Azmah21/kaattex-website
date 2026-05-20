@@ -1,7 +1,6 @@
 "use client"
 
 import { Sheet, SheetClose, SheetContent } from "@/components/ui/sheet"
-import { LocaleToggle } from "@/components/layout/locale-toggle"
 import { getSite } from "@/lib/content/site"
 import { getUi } from "@/lib/content/ui"
 import type { Locale } from "@/lib/i18n"
@@ -18,6 +17,8 @@ export function MobileMenuSheet({
 }) {
   const site = getSite(locale)
   const ui = getUi(locale)
+  const whatsappNumber = site.contact.whatsapp.replace(/\D/g, "")
+  const whatsappHref = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(ui.header.whatsappMessage)}`
 
   return (
     <Sheet open={open} onOpenChange={onOpenChange}>
@@ -43,8 +44,17 @@ export function MobileMenuSheet({
           ))}
         </nav>
 
-        <div className="mt-12">
-          <LocaleToggle locale={locale} />
+        <div className="mt-12 flex flex-col gap-5 border-t border-rule pt-8">
+          <SheetClose asChild>
+            <a href={withLocalePath("/contact", locale)} className="text-body-lg font-medium text-accent">
+              {ui.header.inquire}
+            </a>
+          </SheetClose>
+          <SheetClose asChild>
+            <a href={whatsappHref} target="_blank" rel="noreferrer" className="text-body-lg font-medium text-ink">
+              {ui.header.whatsapp}
+            </a>
+          </SheetClose>
         </div>
       </SheetContent>
     </Sheet>

@@ -21,7 +21,7 @@ export const site = {
   wordmark: "KAATTEX",
   tagline: "Industrial embroidery, made in Faisalabad since 1999.",
   description:
-    "Kaattex is an industrial embroidery manufacturer in Faisalabad, Punjab, producing precision embroidery, sequin work, appliqué, and puff embroidery for apparel and home-textile manufacturers across Pakistan and abroad.",
+    "Kaattex is an industrial embroidery manufacturer in Faisalabad, Punjab, operating 20 multi-head Barudan machines for apparel and home-textile manufacturers across Pakistan and abroad.",
   nav: [
     { label: "Capabilities", href: "/capabilities" },
     { label: "About", href: "/about" },
@@ -32,7 +32,7 @@ export const site = {
   contact,
   footer: {
     blurb:
-      "A 27-year industrial embroidery house in Faisalabad operating 20 Barudan machines for Pakistan’s leading apparel and textile brands.",
+      "A 27-year industrial embroidery house in Faisalabad operating 20 multi-head Barudan machines for Pakistan’s leading apparel and textile brands.",
     copyright: (year: number) => `© ${year} Kaattex. Faisalabad, Pakistan.`,
   },
 } as const
@@ -42,7 +42,7 @@ export const siteUr = {
   wordmark: "KAATTEX",
   tagline: "1999 سے فیصل آباد میں صنعتی کڑھائی۔",
   description:
-    "Kaattex فیصل آباد کا ایک کڑھائی ساز ادارہ ہے جو پاکستان اور بیرونِ ملک ملبوسات اور ہوم ٹیکسٹائل برانڈز کے لیے نفیس کڑھائی، سیکوئن ورک، اپلیکے، اور پف کڑھائی تیار کرتا ہے۔",
+    "Kaattex فیصل آباد کا صنعتی کڑھائی ادارہ ہے جو 20 ملٹی ہیڈ باروڈان مشینوں کے ساتھ پاکستان اور بیرونِ ملک ملبوسات اور ہوم ٹیکسٹائل اداروں کے لیے کام کرتا ہے۔",
   nav: [
     { label: "صلاحیتیں", href: withLocalePath("/capabilities", "ur") },
     { label: "تعارف", href: withLocalePath("/about", "ur") },
@@ -53,7 +53,7 @@ export const siteUr = {
   contact: contactUr,
   footer: {
     blurb:
-      "ستائیس برس پرانا کڑھائی گھر، جو پاکستان کے نمایاں ملبوسات اور ٹیکسٹائل اداروں کے لیے 20 باروڈان مشینوں کے ساتھ کام کرتا ہے۔",
+      "ستائیس برس پرانا کڑھائی گھر، جو پاکستان کے نمایاں ملبوسات اور ٹیکسٹائل اداروں کے لیے 20 ملٹی ہیڈ باروڈان مشینوں کے ساتھ کام کرتا ہے۔",
     copyright: (year: number) => `© ${year} Kaattex۔ فیصل آباد، پاکستان۔`,
   },
 } as const

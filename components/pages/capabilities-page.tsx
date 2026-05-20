@@ -24,6 +24,7 @@ export function CapabilitiesPageContent({ locale }: { locale: Locale }) {
               <h1 id="capabilities-title" className="mt-6 text-display-2xl">
                 {capabilities.intro.title}
               </h1>
+              <p className="mt-8 max-w-3xl text-body-lg text-graphite">{capabilities.intro.description}</p>
             </div>
             {brochureExists ? (
               <Button asChild variant="ghost">
@@ -49,14 +50,15 @@ export function CapabilitiesPageContent({ locale }: { locale: Locale }) {
                   <h2 className="mt-6 text-display-xl md:mt-10">{item.name}</h2>
                 </div>
                 <div className="mt-8 md:mt-0">
-                  <p className="mt-8 text-body-lg text-graphite">{item.description}</p>
-                  <ul className="mt-10 border-t border-rule">
-                    {item.bullets.map((bullet) => (
-                      <li key={bullet} className="border-b border-rule py-4 text-body-sm text-graphite">
-                        {bullet}
-                      </li>
+                  <p className="text-body-lg text-graphite">{item.description}</p>
+                  <dl className="mt-10 border-t border-rule">
+                    {item.specs.map((spec) => (
+                      <div key={spec.label} className="grid gap-2 border-b border-rule py-4 md:grid-cols-[10rem_1fr]">
+                        <dt className="text-[11px] font-medium uppercase tracking-[0.16em] text-ash">{spec.label}</dt>
+                        <dd className="text-body-sm text-graphite">{spec.value}</dd>
+                      </div>
                     ))}
-                  </ul>
+                  </dl>
                 </div>
               </Reveal>
             )
