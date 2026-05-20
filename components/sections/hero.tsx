@@ -18,7 +18,7 @@ export function Hero({ hasHeroImage, locale }: HeroProps) {
   return (
     <section
       aria-labelledby="home-hero-title"
-      className="relative flex min-h-[64svh] items-end overflow-hidden sm:min-h-[72vh]"
+      className="relative flex min-h-[64svh] items-end overflow-hidden sm:min-h-[68vh]"
     >
       <div data-header-sentinel className="absolute left-0 top-0 h-px w-px" />
       {hasHeroImage ? (
@@ -36,12 +36,12 @@ export function Hero({ hasHeroImage, locale }: HeroProps) {
       )}
       <div className="absolute inset-0 bg-bone/30" aria-hidden="true" />
 
-      <Container className="relative z-10 py-12 sm:py-28 md:py-36">
+      <Container className="relative z-10 py-10 sm:py-16 md:py-20">
         <Reveal className="max-w-5xl">
           <Eyebrow>{home.hero.eyebrow}</Eyebrow>
           <h1
             id="home-hero-title"
-            className="mt-6 max-w-[18ch] text-[clamp(2.25rem,9vw,3rem)] leading-[1.04] tracking-[-0.02em] text-ink sm:text-display-2xl"
+            className="mt-6 max-w-[18ch] text-[clamp(2.25rem,9vw,3rem)] leading-[1.04] tracking-[-0.02em] text-ink sm:text-[clamp(3rem,5vw+0.5rem,5.5rem)]"
           >
             {home.hero.title}
           </h1>
@@ -49,7 +49,7 @@ export function Hero({ hasHeroImage, locale }: HeroProps) {
             {home.hero.description}
           </p>
 
-          <div className="mt-6 flex flex-wrap items-center gap-6 sm:mt-10">
+          <div className="mt-6 flex flex-wrap items-center gap-6 sm:mt-8">
             <ArrowLink href={home.hero.primaryLink.href}>{home.hero.primaryLink.label}</ArrowLink>
             <span className="hidden h-6 w-px bg-rule sm:block" aria-hidden="true" />
             <Button asChild variant="ghost">
