@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# GPTBot is not explicitly allowed here. Add it only if the site owner accepts
+# broader training/data-use implications beyond ChatGPT search visibility.
+
+Sitemap: https://kaattex.com/sitemap.xml

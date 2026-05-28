@@ -140,34 +140,76 @@ export function InquiryForm({ locale }: { locale: Locale }) {
           id="customerName"
           label={contactPage.form.customerName}
           error={errors.customerName?.message}
-          input={<Input id="customerName" {...register("customerName")} />}
+          input={
+            <Input
+              id="customerName"
+              autoComplete="name"
+              aria-invalid={Boolean(errors.customerName)}
+              aria-describedby="customerName-error"
+              {...register("customerName")}
+            />
+          }
         />
         <Field
           id="companyName"
           label={contactPage.form.companyName}
           error={errors.companyName?.message}
-          input={<Input id="companyName" {...register("companyName")} />}
+          input={
+            <Input
+              id="companyName"
+              autoComplete="organization"
+              aria-invalid={Boolean(errors.companyName)}
+              aria-describedby="companyName-error"
+              {...register("companyName")}
+            />
+          }
         />
         <Field
           id="email"
           label={contactPage.form.email}
           error={errors.email?.message}
-          input={<Input id="email" type="email" {...register("email")} />}
+          input={
+            <Input
+              id="email"
+              type="email"
+              autoComplete="email"
+              aria-invalid={Boolean(errors.email)}
+              aria-describedby="email-error"
+              {...register("email")}
+            />
+          }
         />
         <Field
           id="phoneNumber"
           label={contactPage.form.phoneNumber}
           error={errors.phoneNumber?.message}
-          input={<Input id="phoneNumber" {...register("phoneNumber")} />}
+          input={
+            <Input
+              id="phoneNumber"
+              type="tel"
+              autoComplete="tel"
+              aria-invalid={Boolean(errors.phoneNumber)}
+              aria-describedby="phoneNumber-error"
+              {...register("phoneNumber")}
+            />
+          }
         />
       </div>
 
       <div>
         <Label htmlFor="projectDetails">{contactPage.form.projectDetails}</Label>
-        <Textarea id="projectDetails" className="mt-3" {...register("projectDetails")} />
+        <Textarea
+          id="projectDetails"
+          className="mt-3"
+          aria-invalid={Boolean(errors.projectDetails)}
+          aria-describedby="projectDetails-error projectDetails-count"
+          {...register("projectDetails")}
+        />
         <div className="mt-3 flex items-center justify-between gap-4 text-body-sm text-ash">
-          <span>{errors.projectDetails?.message}</span>
-          <span>{contactPage.form.characters(characterCount)}</span>
+          <span id="projectDetails-error" role={errors.projectDetails ? "alert" : undefined}>
+            {errors.projectDetails?.message}
+          </span>
+          <span id="projectDetails-count">{contactPage.form.characters(characterCount)}</span>
         </div>
       </div>
 
@@ -179,9 +221,16 @@ export function InquiryForm({ locale }: { locale: Locale }) {
           type="file"
           accept={ACCEPTED_EXTENSIONS.join(",")}
           onChange={handleFile}
+          aria-invalid={Boolean(fileError)}
+          aria-describedby="attachment-hint attachment-error"
           className="mt-3 h-auto py-3 file:mr-6 file:border-0 file:bg-transparent file:px-0 file:text-body-sm file:font-medium file:text-ink"
         />
-        <p className="mt-3 text-body-sm text-ash">{contactPage.form.attachmentHint}</p>
+        <p id="attachment-hint" className="mt-3 text-body-sm text-ash">
+          {contactPage.form.attachmentHint}
+        </p>
+        <p id="attachment-error" role={fileError ? "alert" : undefined} className="mt-3 min-h-6 text-body-sm text-ash">
+          {fileError}
+        </p>
 
         {file ? (
           <ul className="mt-6 divide-y divide-rule border-t border-rule">
@@ -221,7 +270,9 @@ function Field({
     <div>
       <Label htmlFor={id}>{label}</Label>
       <div className="mt-3">{input}</div>
-      <p className="mt-3 min-h-6 text-body-sm text-ash">{error}</p>
+      <p id={`${id}-error`} role={error ? "alert" : undefined} className="mt-3 min-h-6 text-body-sm text-ash">
+        {error}
+      </p>
     </div>
   )
 }

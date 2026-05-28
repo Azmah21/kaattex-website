@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils"
 const Sheet = SheetPrimitive.Root
 const SheetTrigger = SheetPrimitive.Trigger
 const SheetClose = SheetPrimitive.Close
+const SheetTitle = SheetPrimitive.Title
 
 const SheetPortal = SheetPrimitive.Portal
 
@@ -42,4 +43,4 @@ const SheetContent = React.forwardRef<
 ))
 SheetContent.displayName = SheetPrimitive.Content.displayName
 
-export { Sheet, SheetTrigger, SheetClose, SheetContent }
+export { Sheet, SheetTrigger, SheetClose, SheetContent, SheetTitle }

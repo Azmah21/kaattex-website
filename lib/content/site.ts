@@ -21,7 +21,9 @@ export const site = {
   wordmark: "KAATTEX",
   tagline: "Industrial embroidery, made in Faisalabad since 1999.",
   description:
-    "Kaattex is an industrial embroidery manufacturer in Faisalabad, Punjab, operating 20 multi-head Barudan machines for apparel and home-textile manufacturers across Pakistan and abroad.",
+    "KAATTEX is a 27-year B2B industrial embroidery manufacturer in Faisalabad, Punjab, operating 20 multi-head Barudan machines for apparel and home-textile manufacturers in Pakistan and export supply chains abroad.",
+  disambiguatingDescription:
+    "KAATTEX is the official industrial embroidery manufacturer at Pul Abdullah Bridge on Main Samundri Road, Faisalabad. It is not an online retail fabric review business or an unrelated textile abbreviation.",
   nav: [
     { label: "Capabilities", href: "/capabilities" },
     { label: "About", href: "/about" },
@@ -29,10 +31,14 @@ export const site = {
     { label: "FAQ", href: "/faq" },
     { label: "Contact", href: "/contact" },
   ],
+  serviceAreas: [
+    { label: "Embroidery Faisalabad", href: "/industrial-embroidery-faisalabad" },
+    { label: "Embroidery Lahore", href: "/industrial-embroidery-lahore" },
+  ],
   contact,
   footer: {
     blurb:
-      "A 27-year industrial embroidery house in Faisalabad operating 20 multi-head Barudan machines for Pakistan’s leading apparel and textile brands.",
+      "A 27-year industrial embroidery house in Faisalabad serving textile manufacturers in Punjab, Pakistan, and export supply chains abroad.",
     copyright: (year: number) => `© ${year} Kaattex. Faisalabad, Pakistan.`,
   },
 } as const
@@ -43,6 +49,8 @@ export const siteUr = {
   tagline: "1999 سے فیصل آباد میں صنعتی کڑھائی۔",
   description:
     "Kaattex فیصل آباد کا صنعتی کڑھائی ادارہ ہے جو 20 ملٹی ہیڈ باروڈان مشینوں کے ساتھ پاکستان اور بیرونِ ملک ملبوسات اور ہوم ٹیکسٹائل اداروں کے لیے کام کرتا ہے۔",
+  disambiguatingDescription:
+    "KAATTEX Pul Abdullah Bridge, Main Samundri Road, Faisalabad پر موجود صنعتی کڑھائی ادارہ ہے۔",
   nav: [
     { label: "صلاحیتیں", href: withLocalePath("/capabilities", "ur") },
     { label: "تعارف", href: withLocalePath("/about", "ur") },
@@ -50,6 +58,7 @@ export const siteUr = {
     { label: "سوالات", href: withLocalePath("/faq", "ur") },
     { label: "رابطہ", href: withLocalePath("/contact", "ur") },
   ],
+  serviceAreas: [],
   contact: contactUr,
   footer: {
     blurb:

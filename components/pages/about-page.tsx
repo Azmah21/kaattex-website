@@ -1,20 +1,34 @@
 import { Container } from "@/components/layout/container"
+import { ArrowLink } from "@/components/primitives/arrow-link"
 import { Divider } from "@/components/primitives/divider"
 import { Eyebrow } from "@/components/primitives/eyebrow"
 import { OptimizedImage } from "@/components/primitives/optimized-image"
 import { Reveal } from "@/components/primitives/reveal"
+import { JsonLd } from "@/components/seo/json-ld"
 import { getAbout } from "@/lib/content/about"
+import { getSite } from "@/lib/content/site"
 import { getUi } from "@/lib/content/ui"
 import { hasPublicAsset } from "@/lib/assets"
 import type { Locale } from "@/lib/i18n"
+import { withLocalePath } from "@/lib/i18n"
+import { createBreadcrumbSchema } from "@/lib/structured-data"
 
 export function AboutPageContent({ locale }: { locale: Locale }) {
   const about = getAbout(locale)
+  const site = getSite(locale)
   const ui = getUi(locale)
   const hasFacilityImage = hasPublicAsset("/images/facility/facility-01.jpg")
+  const breadcrumbSchema = createBreadcrumbSchema(
+    [
+      { name: "Home", path: "/" },
+      { name: about.intro.eyebrow, path: "/about" },
+    ],
+    locale,
+  )
 
   return (
     <main>
+      <JsonLd data={breadcrumbSchema} />
       <section aria-labelledby="about-title" className="py-24 md:py-32">
         <Container>
           <Reveal>
@@ -80,17 +94,27 @@ export function AboutPageContent({ locale }: { locale: Locale }) {
               </Reveal>
             ))}
           </dl>
+          <Reveal className="mt-12 flex flex-wrap gap-8">
+            <ArrowLink href={withLocalePath("/capabilities", locale)}>{site.nav[0].label}</ArrowLink>
+            <ArrowLink href={withLocalePath("/clients", locale)}>{site.nav[2].label}</ArrowLink>
+          </Reveal>
         </Container>
       </section>
 
-      <section aria-labelledby="machines-title" className="py-24 md:py-32">
+      <section aria-labelledby="machines-title" className="bg-ivory py-24 md:py-32">
         <Container>
-          <Reveal className="max-w-4xl">
-            <Eyebrow>{about.machines.eyebrow}</Eyebrow>
-            <h2 id="machines-title" className="mt-6 text-display-xl">
-              {about.machines.title}
-            </h2>
-            <p className="mt-8 text-body-lg text-graphite">{about.machines.body}</p>
+          <Reveal className="grid gap-10 md:grid-cols-[minmax(0,0.8fr)_minmax(0,1fr)] md:gap-20">
+            <div>
+              <Eyebrow>{about.machines.eyebrow}</Eyebrow>
+              <h2 id="machines-title" className="mt-6 text-display-xl">
+                {about.machines.title}
+              </h2>
+            </div>
+            <div className="space-y-8 text-body-lg text-graphite">
+              {about.machines.paragraphs.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
           </Reveal>
         </Container>
       </section>
@@ -115,4 +139,3 @@ export function AboutPageContent({ locale }: { locale: Locale }) {
     </main>
   )
 }
-

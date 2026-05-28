@@ -14,7 +14,7 @@ export function Footer({ locale }: { locale: Locale }) {
   return (
     <footer className="bg-bone py-20">
       <Container>
-        <div className="grid gap-12 md:grid-cols-[1.3fr_0.8fr_1fr]">
+        <div className="grid gap-12 md:grid-cols-[1.3fr_0.8fr_0.8fr_1fr]">
           <div>
             <p className="font-display text-[18px] font-normal tracking-[0.2em]">{site.wordmark}</p>
             <p className="mt-6 max-w-sm text-body text-graphite">{site.footer.blurb}</p>
@@ -31,6 +31,20 @@ export function Footer({ locale }: { locale: Locale }) {
               </a>
             ))}
           </nav>
+
+          {site.serviceAreas.length > 0 ? (
+            <nav aria-label="Service areas" className="flex flex-col gap-3">
+              {site.serviceAreas.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="animated-underline w-fit text-body-sm text-ink transition-colors duration-200 hover:text-accent"
+                >
+                  {item.label}
+                </a>
+              ))}
+            </nav>
+          ) : null}
 
           <div className="space-y-3 text-body-sm text-graphite">
             <p>{site.contact.address}</p>

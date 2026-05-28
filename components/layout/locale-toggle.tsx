@@ -6,6 +6,8 @@ import type { Locale } from "@/lib/i18n"
 import { withLocalePath } from "@/lib/i18n"
 import { cn } from "@/lib/utils"
 
+const englishOnlyPaths = ["/industrial-embroidery-faisalabad", "/industrial-embroidery-lahore"]
+
 export function LocaleToggle({ locale }: { locale: Locale }) {
   const pathname = usePathname()
   const ui = getUi(locale)
@@ -17,7 +19,7 @@ export function LocaleToggle({ locale }: { locale: Locale }) {
       : pathname
 
   const enHref = withLocalePath(basePath, "en")
-  const urHref = withLocalePath(basePath, "ur")
+  const urHref = englishOnlyPaths.includes(basePath) ? "/ur" : withLocalePath(basePath, "ur")
 
   function persistLocale(nextLocale: Locale) {
     document.cookie = `kaattex-locale=${nextLocale}; path=/; max-age=31536000; SameSite=Lax`

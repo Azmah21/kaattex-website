@@ -4,18 +4,46 @@ import { Container } from "@/components/layout/container"
 import { ArrowLink } from "@/components/primitives/arrow-link"
 import { Eyebrow } from "@/components/primitives/eyebrow"
 import { Reveal } from "@/components/primitives/reveal"
+import { JsonLd } from "@/components/seo/json-ld"
 import { Button } from "@/components/ui/button"
 import { getCapabilities } from "@/lib/content/capabilities"
 import { getUi } from "@/lib/content/ui"
 import type { Locale } from "@/lib/i18n"
+import { withLocalePath } from "@/lib/i18n"
+import { siteUrl } from "@/lib/seo"
+import { createBreadcrumbSchema, createServiceSchema } from "@/lib/structured-data"
 
 export function CapabilitiesPageContent({ locale }: { locale: Locale }) {
   const capabilities = getCapabilities(locale)
   const ui = getUi(locale)
   const brochureExists = fs.existsSync(path.join(process.cwd(), "public", "brochure.pdf"))
+  const pagePath = "/capabilities"
+  const pageUrl = new URL(withLocalePath(pagePath, locale), siteUrl).toString()
+  const breadcrumbSchema = createBreadcrumbSchema(
+    [
+      { name: "Home", path: "/" },
+      { name: capabilities.intro.title, path: pagePath },
+    ],
+    locale,
+  )
+  const serviceSchema = createServiceSchema({
+    id: `${pageUrl}#industrial-embroidery-services`,
+    name: capabilities.intro.title,
+    description: capabilities.intro.description,
+    serviceType: "Industrial embroidery manufacturing",
+    areaServed: [
+      { "@type": "Country", name: "Pakistan" },
+      { "@type": "Country", name: "United Kingdom" },
+      { "@type": "AdministrativeArea", name: "European Union" },
+      { "@type": "Country", name: "United States" },
+    ],
+    offers: capabilities.items.map((item) => item.name),
+  })
 
   return (
     <main>
+      <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={serviceSchema} />
       <section aria-labelledby="capabilities-title" className="py-24 md:py-32">
         <Container>
           <Reveal className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
@@ -35,12 +63,38 @@ export function CapabilitiesPageContent({ locale }: { locale: Locale }) {
         </Container>
       </section>
 
-      <section aria-label={ui.accessibility.capabilityDetails} className="pb-24 md:pb-32">
+      <section aria-labelledby="production-capacity-title" className="bg-ivory py-24 md:py-32">
+        <Container>
+          <Reveal className="grid gap-10 md:grid-cols-[minmax(0,0.75fr)_minmax(0,1fr)] md:gap-20">
+            <div>
+              <Eyebrow>{capabilities.capacity.eyebrow}</Eyebrow>
+              <h2 id="production-capacity-title" className="mt-6 text-display-xl">
+                {capabilities.capacity.title}
+              </h2>
+            </div>
+            <div>
+              <div className="space-y-8 text-body-lg text-graphite">
+                {capabilities.capacity.paragraphs.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </div>
+              <ul className="mt-12 grid gap-x-8 gap-y-4 border-y border-rule py-6 text-body-sm text-ash sm:grid-cols-2">
+                {capabilities.capacity.stats.map((stat) => (
+                  <li key={stat}>{stat}</li>
+                ))}
+              </ul>
+            </div>
+          </Reveal>
+        </Container>
+      </section>
+
+      <section aria-label={ui.accessibility.capabilityDetails} className="py-24 md:py-32">
         <Container>
           {capabilities.items.map((item, index) => {
             return (
               <Reveal
                 key={item.name}
+                id={item.slug}
                 className={`border-t border-rule py-16 last:border-b md:grid md:grid-cols-[minmax(0,0.7fr)_minmax(0,1fr)] md:gap-20 ${
                   index === 0 ? "pt-0" : ""
                 }`}
@@ -59,6 +113,9 @@ export function CapabilitiesPageContent({ locale }: { locale: Locale }) {
                       </div>
                     ))}
                   </dl>
+                  <div className="mt-8">
+                    <ArrowLink href={capabilities.inquiry.link.href}>{capabilities.inquiry.link.label}</ArrowLink>
+                  </div>
                 </div>
               </Reveal>
             )

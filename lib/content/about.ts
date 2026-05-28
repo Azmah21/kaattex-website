@@ -54,10 +54,13 @@ export const about = {
     ],
   },
   machines: {
-    eyebrow: "THE MACHINES",
-    title: "Barudan embroidery machines in Faisalabad, held to one house standard.",
-    body:
-      "Twenty Barudan multi-head embroidery machines — sourced directly from Japan, maintained by an in-house technical team, and including machines with more than 20 heads — let us hold consistent quality across a monthly capacity of more than 200,000 units. Capacity matters to our clients in two ways: it lets us absorb urgent timelines without compromising quality, and it lets us produce a single brand standard across the full run, head to head.",
+    eyebrow: "THE PLANT",
+    title: "Twenty Barudan machines. One standard of finish.",
+    paragraphs: [
+      "Every machine on the KAATTEX floor is built by Barudan. The Japanese manufacturer has set the benchmark for industrial embroidery since 1959 — it built the world's first multi-head computerised embroidery machine — and the trade still treats its name as shorthand for stitch quality. We run Barudan for the same reason our clients keep returning to us: it is the difference between embroidery that passes and embroidery that is exact.",
+      "Our floor operates twenty Barudan multi-head machines — more than four hundred embroidery heads, every one of them a nine-colour head. That is several hundred heads stitching in parallel: the same design, to the same tolerance, across the entire run. It is what lets us take an order of tens of thousands of pieces and return every one of them matching the approved sample.",
+      "The plant runs three shifts, around the clock, with servo-driven motion, automatic thread trimming, and centralised production monitoring keeping the work fast and consistent from the first piece to the last. Speed reaches up to 1,200 stitches per minute — but speed only counts if the finish holds. Across every shift, the finish holds.",
+    ],
   },
   shipping: {
     eyebrow: "WHERE WE SHIP",
@@ -120,10 +123,13 @@ export const aboutUr = {
     ],
   },
   machines: {
-    eyebrow: "مشینیں",
-    title: "جاپانی درستگی، ایک ہی گھریلو معیار کے تحت۔",
-    body:
-      "جاپان سے براہِ راست حاصل کی گئی اور اندرونی تکنیکی ٹیم کے ذریعے برقرار رکھی گئی 20 باروڈان ملٹی ہیڈ مشینیں — جن میں 20 سے زیادہ ہیڈز والی مشینیں بھی شامل ہیں — ہمیں ماہانہ 200K+ یونٹس کی گنجائش کے ساتھ مستقل معیار قائم رکھنے دیتی ہیں۔ ہمارے کلائنٹس کے لیے گنجائش دو طرح سے اہم ہے: یہ ہمیں فوری ٹائم لائنز سنبھالنے دیتی ہے، اور پورے رن میں ایک ہی برانڈ معیار کو سر تا سر برقرار رکھتی ہے۔",
+    eyebrow: "پلانٹ",
+    title: "بیس باروڈان مشینیں۔ تکمیل کا ایک معیار۔",
+    paragraphs: [
+      "KAATTEX کے فلور کی ہر مشین باروڈان کی بنائی ہوئی ہے۔ جاپانی صنعت کار 1959 سے صنعتی کڑھائی میں معیار قائم کر رہا ہے — اسی نے دنیا کی پہلی ملٹی ہیڈ کمپیوٹرائزڈ کڑھائی مشین بنائی — اور آج بھی تجارت میں اس کا نام اسٹچ کوالٹی کی علامت سمجھا جاتا ہے۔ ہم باروڈان اسی وجہ سے چلاتے ہیں جس وجہ سے ہمارے کلائنٹس واپس آتے ہیں: یہ قابل قبول کڑھائی اور بالکل درست کڑھائی کا فرق ہے۔",
+      "ہمارا فلور بیس باروڈان ملٹی ہیڈ مشینیں چلاتا ہے — چار سو سے زیادہ کڑھائی ہیڈز، اور ہر ایک نو رنگوں والا ہیڈ۔ یعنی کئی سو ہیڈز بیک وقت ایک ہی ڈیزائن کو ایک ہی برداشت کے ساتھ کڑھتے ہیں۔ یہی ہمیں دسیوں ہزار پیسز کا آرڈر لے کر ہر پیس کو منظور شدہ سیمپل کے مطابق واپس کرنے دیتا ہے۔",
+      "پلانٹ تین شفٹوں میں دن رات چلتا ہے، جہاں سروو موشن، خودکار تھریڈ ٹرمنگ، اور مرکزی پیداواری نگرانی کام کو پہلے پیس سے آخری پیس تک تیز اور مستقل رکھتی ہے۔ رفتار 1,200 ٹانکے فی منٹ تک پہنچتی ہے — مگر رفتار صرف تب معنی رکھتی ہے جب تکمیل برقرار رہے۔ ہر شفٹ میں تکمیل برقرار رہتی ہے۔",
+    ],
   },
   shipping: {
     eyebrow: "جہاں تک ہمارا کام پہنچتا ہے",

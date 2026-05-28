@@ -23,7 +23,11 @@ export function CapabilityList({ locale }: { locale: Locale }) {
           {home.capabilities.items.map((item) => (
             <Reveal key={item.name}>
               <div className="grid gap-6 py-8 md:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)_minmax(10rem,0.35fr)] md:items-baseline">
-                <h3 className="text-display-lg">{item.name}</h3>
+                <h3 className="text-display-lg">
+                  <a href={item.href} className="animated-underline transition-colors duration-200 hover:text-accent">
+                    {item.name}
+                  </a>
+                </h3>
                 <p className="text-body-lg text-graphite">{item.summary}</p>
                 <p className="hidden text-body-sm text-ash md:block">{item.proof}</p>
               </div>

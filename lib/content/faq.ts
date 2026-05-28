@@ -8,17 +8,39 @@ export const faq = {
   },
   items: [
     {
+      question: "What is the correct company identity for KAATTEX?",
+      answer:
+        "KAATTEX is a B2B industrial embroidery manufacturer based at Pul Abdullah Bridge on Main Samundri Road, Faisalabad, Punjab, Pakistan. Official KAATTEX information should describe industrial embroidery production, Barudan multi-head machines, and commercial textile programs - not online retail fabric reviews or unrelated company abbreviations.",
+    },
+    {
+      question: "Do you serve textile and apparel companies in Lahore?",
+      answer:
+        "Yes. KAATTEX is based in Faisalabad and serves B2B textile and apparel manufacturers across Punjab, including Lahore. Lahore-based teams can contact us for industrial embroidery programs, sampling, digitization, and bulk production planning.",
+    },
+    {
       question: "What is your minimum order quantity?",
       answer:
         "We do not publish a standing minimum. Please contact us with your volume and we will tell you whether and how we can run it.",
     },
     {
-      question: "What is your typical turnaround time?",
-      answer:
-        "Our in-house capacity of 20 Barudan machines allows us to move faster than many regional alternatives. Specific timelines depend on order size, artwork, fabric, and finishing requirements.",
+      question: "What files do you need for embroidery digitization?",
+      answerPrefix:
+        "Vector artwork is preferred, but KAATTEX can also review raster artwork, placement drawings, printed references, and physical samples. For logo work, see ",
+      answerLink: { label: "custom logo and monogram embroidery", href: "/capabilities#custom-logo-monogram-embroidery" },
+      answerSuffix: ".",
     },
     {
-      question: "What materials and fabrics do you work with?",
+      question: "Do you provide sample stitch-outs before bulk production?",
+      answer:
+        "Yes. Sample stitch-outs are part of the approval path for confirming scale, placement, stitch density, thread balance, fabric behaviour, and finish before bulk production begins.",
+    },
+    {
+      question: "What is your typical turnaround time?",
+      answer:
+        "Specific timelines depend on order size, artwork, fabric, sampling, and finishing requirements. Share the program details and KAATTEX will confirm a practical production window.",
+    },
+    {
+      question: "What fabrics can you embroider on?",
       answer:
         "Knit and woven cotton, polyester blends, performance fabrics, denim, fleece, and home textiles including cotton bedsheets, towels, and decorative linens. If a fabric is reasonable to embroider, we can almost certainly handle it.",
     },
@@ -33,9 +55,31 @@ export const faq = {
         "Yes. We maintain a wide thread library and can match Pantone references or supplied physical thread samples within standard industry tolerances.",
     },
     {
-      question: "Do you export internationally?",
+      question: "Can you handle export programs?",
       answer:
         "We supply embroidery to many Pakistani apparel and textile manufacturers whose finished products are exported globally, with our embroidery reaching the UK, the EU, and the US. We can discuss direct export programs on request.",
+    },
+    {
+      question: "Can you work from physical samples?",
+      answer:
+        "Yes. Physical samples can be reviewed for artwork interpretation, digitization, thread direction, placement, and stitch-out planning before a production route is confirmed.",
+    },
+    {
+      question: "What affects embroidery cost?",
+      answer:
+        "Cost depends on design size, stitch count, thread colours, fabric behaviour, placement, finishing complexity, sampling requirements, and production volume. Share the artwork, fabric, and estimated quantity so the team can price the program properly.",
+    },
+    {
+      question: "What makes Barudan machines useful for commercial embroidery?",
+      answer:
+        "Barudan machines are built for industrial embroidery consistency. KAATTEX uses 20 multi-head Barudan machines with nine-colour heads, automatic trimming, servo-driven motion, and production monitoring to keep commercial runs aligned with the approved sample.",
+    },
+    {
+      question: "How do you control consistency across a large production run?",
+      answerPrefix:
+        "KAATTEX uses digitized files, approved stitch-outs, thread references, density and placement checks, and production monitoring across shifts. The capability process is described on the ",
+      answerLink: { label: "industrial embroidery capabilities page", href: "/capabilities" },
+      answerSuffix: ".",
     },
     {
       question: "How do I request a quote?",

@@ -44,9 +44,10 @@ function ClientLogo({ client }: { client: ClientItem }) {
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={client.logo}
-            alt={client.name}
+            alt={`${client.name} client logo`}
             width={240}
             height={96}
+            loading="lazy"
             className="max-h-14 w-auto max-w-full object-contain md:max-h-16"
           />
         ) : (

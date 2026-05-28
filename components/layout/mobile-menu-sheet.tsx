@@ -1,6 +1,6 @@
 "use client"
 
-import { Sheet, SheetClose, SheetContent } from "@/components/ui/sheet"
+import { Sheet, SheetClose, SheetContent, SheetTitle } from "@/components/ui/sheet"
 import { getSite } from "@/lib/content/site"
 import { getUi } from "@/lib/content/ui"
 import type { Locale } from "@/lib/i18n"
@@ -22,7 +22,8 @@ export function MobileMenuSheet({
 
   return (
     <Sheet open={open} onOpenChange={onOpenChange}>
-      <SheetContent>
+      <SheetContent id="mobile-menu">
+        <SheetTitle className="sr-only">{ui.accessibility.mobilePrimaryNav}</SheetTitle>
         <div className="flex items-center justify-between">
           <a href={withLocalePath("/", locale)} className="font-display text-[18px] font-normal tracking-[0.2em] text-ink">
             {site.wordmark}

@@ -2,12 +2,14 @@ import { Mail, Phone } from "lucide-react"
 import { Container } from "@/components/layout/container"
 import { Eyebrow } from "@/components/primitives/eyebrow"
 import { Reveal } from "@/components/primitives/reveal"
+import { JsonLd } from "@/components/seo/json-ld"
 import { InquiryForm } from "@/components/sections/inquiry-form"
 import { NetlifyFormDetector } from "@/components/sections/netlify-form-detector"
 import { Toaster } from "@/components/ui/sonner"
 import { getContactPage } from "@/lib/content/contact"
 import { getSite } from "@/lib/content/site"
 import type { Locale } from "@/lib/i18n"
+import { createBreadcrumbSchema } from "@/lib/structured-data"
 
 function WhatsappIcon() {
   return (
@@ -31,9 +33,17 @@ export function ContactPageContent({ locale }: { locale: Locale }) {
   const hasWhatsapp = !site.contact.whatsapp.includes("[TO BE PROVIDED]")
   const whatsappNumber = site.contact.whatsapp.replace(/\D/g, "")
   const whatsappHref = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(contactPage.direct.whatsappMessage)}`
+  const breadcrumbSchema = createBreadcrumbSchema(
+    [
+      { name: "Home", path: "/" },
+      { name: contactPage.intro.eyebrow, path: "/contact" },
+    ],
+    locale,
+  )
 
   return (
     <main>
+      <JsonLd data={breadcrumbSchema} />
       <Toaster />
       <NetlifyFormDetector />
       <section aria-labelledby="contact-title" className="py-24 md:py-32">

@@ -2,34 +2,34 @@ import type { Locale } from "@/lib/i18n"
 
 export const seo = {
   home: {
-    title: "Industrial Embroidery Manufacturer in Faisalabad — Kaattex",
+    title: "Industrial Embroidery Manufacturer in Faisalabad | KAATTEX",
     description:
-      "Faisalabad embroidery manufacturer operating 20 multi-head Barudan machines for B2B apparel and textile programs across Pakistan.",
+      "KAATTEX is a Faisalabad industrial embroidery manufacturer serving B2B apparel and textile programs across Punjab, Pakistan, and export supply chains.",
   },
   about: {
-    title: "About Kaattex — Faisalabad Embroidery Manufacturer",
+    title: "About KAATTEX | Faisalabad Embroidery Manufacturer Since 1999",
     description:
       "Learn how Kaattex grew from two machines in 1999 into a Faisalabad embroidery manufacturer operating 20 Japanese Barudan machines today.",
   },
   capabilities: {
-    title: "Industrial Embroidery Capabilities — Kaattex",
+    title: "Industrial Embroidery Capabilities | KAATTEX",
     description:
-      "Logo, sequin, appliqué, puff, and pattern embroidery on multi-head Barudan machines for textile manufacturers in Faisalabad and Pakistan.",
+      "Explore KAATTEX capabilities for logo, monogram, decorative, sequin, applique, and puff embroidery on multi-head Barudan machines.",
   },
   clients: {
-    title: "Clients — Kaattex Embroidery",
+    title: "Embroidery Clients & Textile Partners | KAATTEX",
     description:
       "See apparel and textile houses that have worked with Kaattex across Pakistani and export-oriented embroidery production programs over time.",
   },
   faq: {
-    title: "Commercial Embroidery FAQ — Kaattex",
+    title: "Commercial Embroidery FAQ | KAATTEX",
     description:
-      "Answers on embroidery order volumes, turnaround, fabrics, digitization, exports, and quality practices for commercial production inquiries.",
+      "Answers for textile buyers about KAATTEX embroidery order planning, files, fabrics, stitch-outs, export programs, cost factors, and quality controls.",
   },
   contact: {
-    title: "Contact Kaattex — Embroidery Manufacturer in Faisalabad",
+    title: "Contact KAATTEX | Embroidery Manufacturer in Faisalabad",
     description:
-      "Contact Kaattex in Faisalabad for industrial embroidery programs, production requirements, reference artwork, and commercial B2B inquiries.",
+      "Contact KAATTEX in Faisalabad for B2B industrial embroidery programs, artwork review, sampling, and commercial production inquiries.",
   },
 } as const
 

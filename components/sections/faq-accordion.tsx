@@ -12,7 +12,7 @@ export function FaqAccordion({ locale }: { locale: Locale }) {
       {faq.items.map((item) => (
         <AccordionItem key={item.question} value={item.question}>
           <AccordionTrigger>{item.question}</AccordionTrigger>
-          <AccordionContent>
+          <AccordionContent forceMount>
             {"answer" in item ? (
               item.answer
             ) : (

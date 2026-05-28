@@ -1,8 +1,10 @@
 import type { Metadata } from "next"
 import { Fraunces, Inter, Noto_Nastaliq_Urdu } from "next/font/google"
 import { Analytics } from "@vercel/analytics/react"
+import { JsonLd } from "@/components/seo/json-ld"
 import { site } from "@/lib/content/site"
 import { siteUrl } from "@/lib/seo"
+import { createSiteGraph } from "@/lib/structured-data"
 import "./globals.css"
 
 const fraunces = Fraunces({
@@ -29,70 +31,47 @@ const notoNastaliqUrdu = Noto_Nastaliq_Urdu({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Industrial Embroidery Manufacturer in Faisalabad — Kaattex",
-  description: site.description,
-}
-
-const businessSchema = {
-  "@context": "https://schema.org",
-  "@type": ["Organization", "LocalBusiness"],
-  "@id": `${siteUrl}/#organization`,
-  name: site.name,
-  legalName: site.name,
-  url: siteUrl,
-  description: site.description,
-  telephone: site.contact.phone,
-  email: site.contact.email,
-  address: {
-    "@type": "PostalAddress",
-    streetAddress:
-      "Pul Abdullah Bridge, Main Samundri Road, near Hascol Petrol Pump, P-246 Muhalla Farooqabad",
-    addressLocality: "Faisalabad",
-    addressRegion: "Punjab",
-    addressCountry: "PK",
+  title: {
+    default: "Industrial Embroidery Manufacturer in Faisalabad | KAATTEX",
+    template: "%s",
   },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 31.3699345,
-    longitude: 73.0702414,
+  description: site.description,
+  applicationName: site.wordmark,
+  authors: [{ name: site.wordmark, url: siteUrl }],
+  creator: site.wordmark,
+  publisher: site.wordmark,
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-icon.png",
   },
-  areaServed: [
-    {
-      "@type": "City",
-      name: "Faisalabad",
+  alternates: {
+    canonical: `${siteUrl}/`,
+    languages: {
+      en: `${siteUrl}/`,
+      ur: `${siteUrl}/ur`,
+      "x-default": `${siteUrl}/`,
     },
-    {
-      "@type": "City",
-      name: "Lahore",
-    },
-    {
-      "@type": "AdministrativeArea",
-      name: "Punjab",
-    },
-    {
-      "@type": "Country",
-      name: "Pakistan",
-    },
-  ],
-  knowsAbout: [
-    "industrial embroidery",
-    "Barudan embroidery machines",
-    "custom logo embroidery",
-    "decorative pattern embroidery",
-    "sequin embroidery",
-    "appliqué embroidery",
-    "puff embroidery",
-  ],
-}
-
-const websiteSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "@id": `${siteUrl}/#website`,
-  url: siteUrl,
-  name: site.wordmark,
-  publisher: {
-    "@id": `${siteUrl}/#organization`,
+  },
+  openGraph: {
+    type: "website",
+    title: "Industrial Embroidery Manufacturer in Faisalabad | KAATTEX",
+    description: site.description,
+    url: `${siteUrl}/`,
+    siteName: site.wordmark,
+    images: [
+      {
+        url: "/images/og/og-default.jpg",
+        width: 1200,
+        height: 630,
+        alt: "KAATTEX industrial embroidery detail.",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Industrial Embroidery Manufacturer in Faisalabad | KAATTEX",
+    description: site.description,
+    images: ["/images/og/og-default.jpg"],
   },
 }
 
@@ -119,14 +98,7 @@ export default function RootLayout({
       <body className="bg-bone text-ink antialiased">
         <script dangerouslySetInnerHTML={{ __html: localePersistenceScript }} />
         {children}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-        />
+        <JsonLd data={createSiteGraph()} />
         <Analytics />
       </body>
     </html>
