@@ -4,7 +4,7 @@ export const seo = {
   home: {
     title: "Industrial Embroidery Manufacturer in Faisalabad | KAATTEX",
     description:
-      "KAATTEX is a Faisalabad industrial embroidery manufacturer serving B2B apparel and textile programs across Punjab, Pakistan, and export supply chains.",
+      "KAATTEX is a Faisalabad industrial embroidery manufacturer serving B2B textile and apparel programs across Faisalabad, Lahore, Punjab, Pakistan, and export supply chains.",
   },
   about: {
     title: "About KAATTEX | Faisalabad Embroidery Manufacturer Since 1999",
@@ -14,7 +14,7 @@ export const seo = {
   capabilities: {
     title: "Industrial Embroidery Capabilities | KAATTEX",
     description:
-      "Explore KAATTEX capabilities for logo, monogram, decorative, sequin, applique, and puff embroidery on multi-head Barudan machines.",
+      "Explore KAATTEX capabilities for logo, monogram, decorative, sequin, applique, and puff embroidery for Faisalabad and Lahore textile programs.",
   },
   clients: {
     title: "Embroidery Clients & Textile Partners | KAATTEX",

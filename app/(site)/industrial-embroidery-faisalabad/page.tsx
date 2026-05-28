@@ -5,7 +5,7 @@ import { createMetadata } from "@/lib/seo"
 const area = serviceAreas.faisalabad
 
 export const metadata = createMetadata({
-  title: "Industrial Embroidery Faisalabad | KAATTEX",
+  title: "Industrial & Textile Embroidery Faisalabad | KAATTEX",
   description: area.description,
   path: `/${area.slug}`,
   localizedAlternates: false,

@@ -67,6 +67,9 @@ export function ServiceAreaPageContent({ area }: { area: ServiceArea }) {
             <div className="space-y-8 text-body-lg text-graphite">
               <p>{area.intro}</p>
               <p>{area.fit}</p>
+              <ArrowLink href="/textile-embroidery-faisalabad-lahore">
+                Textile embroidery for Faisalabad and Lahore
+              </ArrowLink>
             </div>
           </Reveal>
         </Container>

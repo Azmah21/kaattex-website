@@ -28,12 +28,12 @@ export function createSiteGraph() {
         "@id": `${siteUrl}/#organization`,
         name: site.wordmark,
         legalName: site.wordmark,
-        alternateName: ["Kaattex", "KAATTEX Embroidery", "Kaattex Industrial Embroidery"],
+        alternateName: ["Kaattex", "Kaat Tex", "KAATTEX Embroidery", "Kaattex Industrial Embroidery"],
         url: `${siteUrl}/`,
         logo: `${siteUrl}/icon.svg`,
         image: `${siteUrl}/images/og/og-default.jpg`,
         description:
-          "A 27-year industrial embroidery house in Faisalabad operating 20 multi-head Barudan machines for Pakistan's leading apparel and textile brands.",
+          "A Faisalabad-based industrial and textile embroidery house operating 20 multi-head Barudan machines for commercial apparel and textile programs.",
         disambiguatingDescription: site.disambiguatingDescription,
         foundingDate: "1999",
         email: site.contact.email,
@@ -42,6 +42,13 @@ export function createSiteGraph() {
         areaServed: servedAreas,
         knowsAbout: [
           "industrial embroidery",
+          "textile embroidery",
+          "embroidery Faisalabad",
+          "industrial embroidery Faisalabad",
+          "textile embroidery Faisalabad",
+          "embroidery Lahore",
+          "industrial embroidery Lahore",
+          "textile embroidery Lahore",
           "commercial embroidery production",
           "custom logo embroidery",
           "monogram embroidery",
@@ -93,7 +100,7 @@ export function createSiteGraph() {
 }
 
 export function createBreadcrumbSchema(
-  items: Array<{ name: string; path: string }>,
+  items: ReadonlyArray<{ name: string; path: string }>,
   locale: Locale = defaultLocale,
 ) {
   return {
@@ -115,7 +122,7 @@ export function createFaqPageSchema({
 }: {
   path: string
   locale: Locale
-  items: Array<{ question: string; answer: string }>
+  items: ReadonlyArray<{ question: string; answer: string }>
 }) {
   return {
     "@context": "https://schema.org",

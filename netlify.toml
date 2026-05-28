@@ -5,3 +5,27 @@
 [build.environment]
   NODE_VERSION = "20"
   NEXT_PUBLIC_SITE_URL = "https://kaattex.com"
+
+[[redirects]]
+  from = "/embroidery-faisalabad"
+  to = "/industrial-embroidery-faisalabad"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/embroidery-lahore"
+  to = "/industrial-embroidery-lahore"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/textile-embroidery-faisalabad"
+  to = "/textile-embroidery-faisalabad-lahore"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/textile-embroidery-lahore"
+  to = "/textile-embroidery-faisalabad-lahore"
+  status = 301
+  force = true

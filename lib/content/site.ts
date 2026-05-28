@@ -23,7 +23,7 @@ export const site = {
   description:
     "KAATTEX is a 27-year B2B industrial embroidery manufacturer in Faisalabad, Punjab, operating 20 multi-head Barudan machines for apparel and home-textile manufacturers in Pakistan and export supply chains abroad.",
   disambiguatingDescription:
-    "KAATTEX is the official industrial embroidery manufacturer at Pul Abdullah Bridge on Main Samundri Road, Faisalabad. It is not an online retail fabric review business or an unrelated textile abbreviation.",
+    "KAATTEX is the official industrial embroidery manufacturer at Pul Abdullah Bridge on Main Samundri Road, Faisalabad. It may be searched as Kaat Tex, but it is not Kainaat Textile, KTC, an online retail fabric review business, or an unrelated textile abbreviation.",
   nav: [
     { label: "Capabilities", href: "/capabilities" },
     { label: "About", href: "/about" },
@@ -32,8 +32,9 @@ export const site = {
     { label: "Contact", href: "/contact" },
   ],
   serviceAreas: [
-    { label: "Embroidery Faisalabad", href: "/industrial-embroidery-faisalabad" },
-    { label: "Embroidery Lahore", href: "/industrial-embroidery-lahore" },
+    { label: "Industrial Embroidery Faisalabad", href: "/industrial-embroidery-faisalabad" },
+    { label: "Industrial Embroidery Lahore", href: "/industrial-embroidery-lahore" },
+    { label: "Textile Embroidery Faisalabad & Lahore", href: "/textile-embroidery-faisalabad-lahore" },
   ],
   contact,
   footer: {

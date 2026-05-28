@@ -3,7 +3,11 @@ import { siteUrl } from "@/lib/seo"
 import { withLocalePath } from "@/lib/i18n"
 
 const routes = ["/", "/about", "/capabilities", "/clients", "/faq", "/contact"]
-const englishOnlyRoutes = ["/industrial-embroidery-faisalabad", "/industrial-embroidery-lahore"]
+const englishOnlyRoutes = [
+  "/industrial-embroidery-faisalabad",
+  "/industrial-embroidery-lahore",
+  "/textile-embroidery-faisalabad-lahore",
+]
 const lastModified = new Date("2026-05-28T00:00:00.000Z")
 
 export default function sitemap(): MetadataRoute.Sitemap {

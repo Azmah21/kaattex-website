@@ -4,9 +4,9 @@ import { withLocalePath } from "@/lib/i18n"
 export const home = {
   hero: {
     eyebrow: "EST. 1999 — FAISALABAD, PAKISTAN",
-    title: "Embroidery, at the scale of industry. At the standard of craft.",
+    title: "Industrial embroidery in Faisalabad, at the standard of craft.",
     description:
-      "A floor of twenty Barudan machines, run around the clock — embroidery at the scale of industry, held to the standard of craft.",
+      "KAATTEX is a B2B embroidery manufacturer for textile and apparel programs in Faisalabad, Lahore, and Punjab, running twenty Barudan machines around the clock.",
     primaryLink: { label: "View capabilities", href: "/capabilities" },
     secondaryLink: { label: "Make an inquiry", href: "/contact" },
   },
