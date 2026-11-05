@@ -3,8 +3,17 @@ import type { Locale } from "@/lib/i18n"
 export const contactPage = {
   intro: {
     eyebrow: "CONTACT",
-    title: "Let's talk about your program.",
-    subtitle: "We respond to inquiries within one working day.",
+    title: "Bulk embroidery for men's apparel.",
+    subtitle:
+      "KAATTEX specializes in large-scale embroidery for men's garments and apparel manufactured for export. We work with garment manufacturers and exporters requiring bulk production.",
+  },
+  productionNotice: {
+    title: "Please note before contacting us",
+    exclusions: [
+      "We do not undertake embroidery for women's garments or womenswear.",
+      "We do not accept individual-piece orders or small-batch work for local brands.",
+    ],
+    contactGuidance: "Please contact us for bulk men's apparel production inquiries only.",
   },
   sections: {
     inquiryTitle: "Inquiry",
@@ -21,6 +30,8 @@ export const contactPage = {
     mapTitle: "Kaattex location map",
   },
   form: {
+    guidance:
+      "For bulk men's apparel inquiries, please include your garment type, estimated production quantity, embroidery requirements, and target delivery date.",
     companyName: "Company name",
     customerName: "Customer name",
     email: "Email",
@@ -49,8 +60,18 @@ export const contactPage = {
 export const contactPageUr = {
   intro: {
     eyebrow: "رابطہ",
-    title: "اپنے پروگرام پر بات کرتے ہیں۔",
-    subtitle: "ہم انکوائریز کا جواب ایک ورکنگ ڈے کے اندر دیتے ہیں۔",
+    title: "مردانہ ملبوسات کی بلک کڑھائی۔",
+    subtitle:
+      "ہم صرف ایکسپورٹ کے لیے تیار ہونے والے مردانہ ملبوسات پر بڑے پیمانے پر کڑھائی کرتے ہیں۔ ہماری فیکٹری گارمنٹ مینوفیکچررز اور ایکسپورٹرز کے بلک آرڈرز کے لیے ہے۔",
+  },
+  productionNotice: {
+    title: "واضح اطلاع: لیڈیز کڑھائی کا کام بالکل نہیں کیا جاتا۔",
+    exclusions: [
+      "خواتین کے کپڑوں، لیڈیز سوٹس، قمیضوں، دوپٹوں یا عروسی ملبوسات پر کسی بھی قسم کی کڑھائی نہیں کی جاتی۔ خواتین کے ملبوسات کا آرڈر، چاہے چھوٹا ہو یا بڑا، قبول نہیں کیا جاتا۔",
+      "ایک دو پیس، ذاتی استعمال کے کپڑے یا مقامی برانڈز کے کم تعداد والے آرڈرز بھی قبول نہیں کیے جاتے۔",
+    ],
+    contactGuidance:
+      "براہِ کرم لیڈیز کڑھائی یا چھوٹے آرڈرز کے لیے فون، واٹس ایپ یا یہ فارم استعمال نہ کریں۔ صرف ایکسپورٹ کے مردانہ ملبوسات کی بلک کڑھائی کے لیے رابطہ کریں۔",
   },
   sections: {
     inquiryTitle: "انکوائری",
@@ -67,6 +88,8 @@ export const contactPageUr = {
     mapTitle: "Kaattex کا نقشہ",
   },
   form: {
+    guidance:
+      "یہ فارم صرف ایکسپورٹ کے مردانہ ملبوسات کی بلک کڑھائی کے لیے ہے۔ لیڈیز ملبوسات یا چھوٹے آرڈرز کی انکوائری نہ بھیجیں۔ مردانہ لباس کی قسم، اندازاً کل تعداد، کڑھائی کی تفصیل اور مطلوبہ ڈیلیوری تاریخ درج کریں۔",
     companyName: "کمپنی کا نام",
     customerName: "آپ کا نام",
     email: "ای میل",

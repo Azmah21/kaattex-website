@@ -8,6 +8,16 @@ export const faq = {
   },
   items: [
     {
+      question: "Do you provide embroidery for women's garments?",
+      answer:
+        "No. KAATTEX does not undertake embroidery for women's garments or womenswear. Our production specializes in bulk embroidery for men's apparel manufactured for export.",
+    },
+    {
+      question: "Do you accept small orders or work for local brands?",
+      answer:
+        "Our factory is set up for large-scale production for garment manufacturers and exporters. We do not accept individual-piece orders or small-batch work for local brands. For suitable bulk men's apparel projects, please share your estimated quantity for review.",
+    },
+    {
       question: "What is the correct company identity for KAATTEX?",
       answer:
         "KAATTEX is a B2B industrial embroidery manufacturer based at Pul Abdullah Bridge on Main Samundri Road, Faisalabad, Punjab, Pakistan. Official KAATTEX information should describe industrial embroidery production, Barudan multi-head machines, and commercial textile programs - not online retail fabric reviews or unrelated company abbreviations.",
@@ -20,7 +30,7 @@ export const faq = {
     {
       question: "What is your minimum order quantity?",
       answer:
-        "We do not publish a standing minimum. Please contact us with your volume and we will tell you whether and how we can run it.",
+        "We do not publish a fixed minimum quantity. We accept bulk men's apparel production inquiries for export-oriented manufacturing; individual-piece orders and small-batch work for local brands are not accepted. Please share your estimated bulk quantity for review.",
     },
     {
       question: "What files do you need for embroidery digitization?",
@@ -103,9 +113,19 @@ export const faqUr = {
   },
   items: [
     {
+      question: "کیا آپ لیڈیز کپڑوں یا خواتین کے ملبوسات پر کڑھائی کرتے ہیں؟",
+      answer:
+        "نہیں، بالکل نہیں۔ ہم خواتین کے کپڑوں، لیڈیز سوٹس، قمیضوں، دوپٹوں یا عروسی ملبوسات پر کسی بھی قسم کی کڑھائی نہیں کرتے۔ خواتین کے ملبوسات کا آرڈر، چاہے چھوٹا ہو یا بڑا، قبول نہیں کیا جاتا۔ براہِ کرم اس کام کے لیے فون، واٹس ایپ یا انکوائری فارم کے ذریعے رابطہ نہ کریں۔ ہم صرف ایکسپورٹ کے مردانہ ملبوسات کی بلک کڑھائی کرتے ہیں۔",
+    },
+    {
+      question: "کیا آپ ایک دو پیس یا مقامی برانڈز کے چھوٹے آرڈرز لیتے ہیں؟",
+      answer:
+        "نہیں۔ ذاتی استعمال کے ایک دو پیس اور مقامی برانڈز کے کم تعداد والے آرڈرز قبول نہیں کیے جاتے۔ ہماری فیکٹری صرف ایکسپورٹ کے مردانہ ملبوسات کی بڑے پیمانے پر کڑھائی کے لیے ہے۔ صرف گارمنٹ مینوفیکچررز اور ایکسپورٹرز بلک آرڈرز کی تفصیلات کے ساتھ رابطہ کریں۔",
+    },
+    {
       question: "آپ کی کم از کم آرڈر مقدار کیا ہے؟",
       answer:
-        "ہم کوئی مستقل کم از کم مقدار عوامی طور پر شائع نہیں کرتے۔ اپنی مقدار کے ساتھ رابطہ کریں، ہم صاف بتا دیں گے کہ اسے کس طرح چلایا جا سکتا ہے۔",
+        "ہم کوئی مقررہ کم از کم تعداد شائع نہیں کرتے، لیکن صرف ایکسپورٹ کے مردانہ ملبوسات کے بلک آرڈرز لیتے ہیں۔ ایک دو پیس، مقامی برانڈز کے چھوٹے آرڈرز اور خواتین کے ملبوسات کے آرڈرز قبول نہیں کیے جاتے۔ موزوں بلک آرڈر کے لیے اندازاً کل تعداد بتائیں تاکہ ہم جائزہ لے سکیں۔",
     },
     {
       question: "آپ کا عمومی ٹرن اراؤنڈ وقت کیا ہوتا ہے؟",

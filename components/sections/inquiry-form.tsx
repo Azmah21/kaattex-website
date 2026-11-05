@@ -131,10 +131,14 @@ export function InquiryForm({ locale }: { locale: Locale }) {
       data-netlify="true"
       encType="multipart/form-data"
       className="space-y-10"
+      aria-describedby="inquiry-guidance"
       onSubmit={handleSubmit(onSubmit)}
       noValidate
     >
       <input type="hidden" name="form-name" value="inquiry" />
+      <p id="inquiry-guidance" className="max-w-4xl text-body-lg text-graphite">
+        {contactPage.form.guidance}
+      </p>
       <div className="grid gap-10 md:grid-cols-2">
         <Field
           id="customerName"

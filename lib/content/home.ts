@@ -6,7 +6,7 @@ export const home = {
     eyebrow: "EST. 1999 — FAISALABAD, PAKISTAN",
     title: "Industrial embroidery in Faisalabad, at the standard of craft.",
     description:
-      "KAATTEX is a B2B embroidery manufacturer for textile and apparel programs in Faisalabad, Lahore, and Punjab, running twenty Barudan machines around the clock.",
+      "KAATTEX is an industrial embroidery manufacturer in Faisalabad specializing in bulk production for men's garments and export-oriented apparel, operating twenty Barudan multi-head machines.",
     primaryLink: { label: "View capabilities", href: "/capabilities" },
     secondaryLink: { label: "Make an inquiry", href: "/contact" },
   },
@@ -95,7 +95,7 @@ export const homeUr = {
     eyebrow: "قیام 1999 — فیصل آباد، پاکستان",
     title: "صنعتی پیمانے پر کڑھائی۔ دستکاری کے معیار کے ساتھ۔",
     description:
-      "بیس باروڈان مشینوں کا فلور، دن رات چلتا ہوا — صنعتی پیمانے کی کڑھائی، دستکاری کے معیار کے ساتھ۔",
+      "KAATTEX فیصل آباد میں بیس باروڈان ملٹی ہیڈ مشینوں کے ساتھ صرف ایکسپورٹ کے مردانہ ملبوسات کی بلک کڑھائی کرتا ہے۔ لیڈیز کپڑوں کی کڑھائی، ایک دو پیس یا مقامی برانڈز کے چھوٹے آرڈرز قبول نہیں کیے جاتے۔",
     primaryLink: { label: "صلاحیتیں دیکھیں", href: withLocalePath("/capabilities", "ur") },
     secondaryLink: { label: "رابطہ کریں", href: withLocalePath("/contact", "ur") },
   },
@@ -171,9 +171,9 @@ export const homeUr = {
     link: { label: "Kaattex کے بارے میں مزید", href: withLocalePath("/about", "ur") },
   },
   inquiry: {
-    title: "اپنے اگلے پروگرام پر بات کرتے ہیں۔",
+    title: "مردانہ ملبوسات کے بلک آرڈر کے لیے رابطہ کریں۔",
     description:
-      "لباس، کپڑا، مقدار، اور مطلوبہ کڑھائی کی سمت بتائیں۔ ہم وہاں سے درست پیداواری راستہ ترتیب دینے میں مدد کریں گے۔",
+      "صرف ایکسپورٹ کے مردانہ ملبوسات کی بلک کڑھائی کے لیے لباس، کپڑا، تعداد اور کڑھائی کی تفصیل بھیجیں۔ لیڈیز کڑھائی یا چھوٹے آرڈرز کے لیے رابطہ نہ کریں۔",
     link: { label: "رابطہ کریں", href: withLocalePath("/contact", "ur") },
   },
 } as const

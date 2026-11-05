@@ -55,6 +55,22 @@ export function ContactPageContent({ locale }: { locale: Locale }) {
             </h1>
             <p className="mt-8 text-body-lg text-graphite">{contactPage.intro.subtitle}</p>
           </Reveal>
+          <aside
+            aria-labelledby="production-notice-title"
+            className="mt-10 max-w-5xl border-2 border-accent bg-ivory p-6 md:p-8"
+          >
+            <h2 id="production-notice-title" className="text-display-lg text-accent">
+              {contactPage.productionNotice.title}
+            </h2>
+            <ul className="mt-6 list-disc space-y-4 ps-6 text-body-lg font-medium text-ink">
+              {contactPage.productionNotice.exclusions.map((exclusion) => (
+                <li key={exclusion}>{exclusion}</li>
+              ))}
+            </ul>
+            <p className="mt-6 border-t border-rule pt-6 text-body-lg font-medium text-accent">
+              {contactPage.productionNotice.contactGuidance}
+            </p>
+          </aside>
         </Container>
       </section>
 

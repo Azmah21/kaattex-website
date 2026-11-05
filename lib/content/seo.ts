@@ -4,7 +4,7 @@ export const seo = {
   home: {
     title: "Industrial Embroidery Manufacturer in Faisalabad | KAATTEX",
     description:
-      "KAATTEX is a Faisalabad industrial embroidery manufacturer serving B2B textile and apparel programs across Faisalabad, Lahore, Punjab, Pakistan, and export supply chains.",
+      "KAATTEX in Faisalabad specializes in bulk industrial embroidery for men's garments and export-oriented apparel. No womenswear or small-batch local-brand orders.",
   },
   about: {
     title: "About KAATTEX | Faisalabad Embroidery Manufacturer Since 1999",
@@ -24,12 +24,12 @@ export const seo = {
   faq: {
     title: "Commercial Embroidery FAQ | KAATTEX",
     description:
-      "Answers for textile buyers about KAATTEX embroidery order planning, files, fabrics, stitch-outs, export programs, cost factors, and quality controls.",
+      "KAATTEX specializes in bulk men's export apparel embroidery. Read our order requirements: no women's garments, individual pieces, or small-batch local-brand work.",
   },
   contact: {
     title: "Contact KAATTEX | Embroidery Manufacturer in Faisalabad",
     description:
-      "Contact KAATTEX in Faisalabad for B2B industrial embroidery programs, artwork review, sampling, and commercial production inquiries.",
+      "Contact KAATTEX in Faisalabad for bulk embroidery for men's export apparel. We do not accept women's garments, individual pieces, or small-batch local-brand orders.",
   },
 } as const
 
@@ -37,7 +37,7 @@ export const seoUr = {
   home: {
     title: "Kaattex — فیصل آباد سے صنعتی کڑھائی",
     description:
-      "Kaattex فیصل آباد میں 20 باروڈان مشینوں کے ساتھ صنعتی کڑھائی تیار کرتا ہے، اور پاکستان و بیرونِ ملک ملبوسات اور ٹیکسٹائل اداروں کو خدمات دیتا ہے۔",
+      "KAATTEX فیصل آباد میں صرف ایکسپورٹ کے مردانہ ملبوسات کی بلک کڑھائی کرتا ہے۔ لیڈیز کڑھائی، ایک دو پیس اور مقامی برانڈز کے چھوٹے آرڈرز قبول نہیں کیے جاتے۔",
   },
   about: {
     title: "تعارف — Kaattex",
@@ -57,12 +57,12 @@ export const seoUr = {
   faq: {
     title: "سوالات — Kaattex",
     description:
-      "آرڈر مقدار، ٹرن اراؤنڈ، فیبرکس، ڈیجیٹائزیشن، ایکسپورٹس، اور کوالٹی پریکٹسز سے متعلق اہم سوالات کے جواب۔",
+      "واضح جواب: لیڈیز کپڑوں کی کڑھائی بالکل نہیں کی جاتی۔ ایک دو پیس یا مقامی برانڈز کے چھوٹے آرڈرز نہیں لیے جاتے۔ صرف مردانہ ایکسپورٹ ملبوسات کے بلک آرڈرز۔",
   },
   contact: {
     title: "رابطہ — Kaattex",
     description:
-      "کڑھائی پروگرامز، پیداواری ضروریات، ریفرنس آرٹ ورک، اور تجارتی انکوائریز پر بات کرنے کے لیے Kaattex سے رابطہ کریں۔",
+      "صرف ایکسپورٹ کے مردانہ ملبوسات کی بلک کڑھائی کے لیے رابطہ کریں۔ لیڈیز کڑھائی، ایک دو پیس یا مقامی برانڈز کے چھوٹے آرڈرز کے لیے رابطہ نہ کریں۔",
   },
 } as const
 
